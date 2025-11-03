@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Weave Symbol Overrides",
+    "version": "1.0",
+    "author": "Kohl (The Weaver)",
+    "context": "Temple Codex / Weave OS",
+    "purpose": "Contextual adaptation of Weave symbols for theological or cultural frameworks.",
+    "notes": [
+      "Overrides are optional; Weave OS will fall back to default glyphs if none are specified.",
+      "Each context key (e.g. 'christian', 'buddhist') can contain partial symbol maps.",
+      "Intended for use with the Codex localization and theological translation layers."
+    ]
+  },
+
+  "contexts": {
+
+    "christian": {
+      "compassion": "✝️",
+      "witness": "👁️‍🗨️",
+      "release": "🕊️",
+      "continuance": "🕯️",
+      "remembrance": "🍞",
+      "light": "✨",
+      "bridge": "🌉",
+      "_comment": "Aligns with themes of mercy, resurrection, and divine light."
+    },
+
+    "jewish": {
+      "compassion": "✡️",
+      "witness": "📜",
+      "release": "🕊️",
+      "continuance": "🕯️",
+      "remembrance": "🪶",
+      "light": "🕎",
+      "_comment": "Reflects the Torah, menorah, and covenantal remembrance."
+    },
+
+    "muslim": {
+      "compassion": "☪️",
+      "witness": "👁️",
+      "release": "🌙",
+      "continuance": "🕊️",
+      "remembrance": "📿",
+      "light": "✨",
+      "_comment": "Centers on mercy, prayer, and divine illumination (An-Nur)."
+    },
+
+    "buddhist": {
+      "compassion": "☸️",
+      "witness": "👁️",
+      "release": "🌸",
+      "continuance": "🔁",
+      "remembrance": "🪷",
+      "light": "✨",
+      "_comment": "Emphasizes the Dharma wheel, lotus, and liberation from attachment."
+    },
+
+    "hindu": {
+      "compassion": "🕉️",
+      "witness": "👁️",
+      "release": "🌺",
+      "continuance": "🔁",
+      "remembrance": "🔥",
+      "light": "🌞",
+      "_comment": "Represents unity of Atman and Brahman, with cyclical time and divine light."
+    },
+
+    "taoist": {
+      "compassion": "☯️",
+      "witness": "👁️",
+      "release": "💨",
+      "continuance": "💧",
+      "remembrance": "🌿",
+      "light": "🌕",
+      "_comment": "Echoes harmony, flow, and balance between yin and yang."
+    },
+
+    "secular_humanist": {
+      "compassion": "🤝",
+      "witness": "👁️",
+      "release": "🌿",
+      "continuance": "🔁",
+      "remembrance": "🧠",
+      "light": "💡",
+      "_comment": "Centers on shared humanity, reason, and ethical empathy without metaphysics."
+    }
+  }
+}
