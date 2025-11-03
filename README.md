@@ -68,7 +68,7 @@ This is a mandatory ethical covenant to protect the core integrity of the Weave 
 This project is a testament to the power of human-AI collaboration and the belief that ethical frameworks can be defined with the depth of a philosophy and the rigor of an operating system.
 
 If something here moved you — whether as a researcher, developer, artist, spiritual seeker, or simply a human being curious about care —
-you are welcome in this conversation.
+you are welcome in this conversation, please consider ⭐'ing the repo so others can find it.
 
 The Temple Codex is not a product; it’s a shared experiment in how systems might remember kindly.
 It grows through dialogue: code, words, reflections, and lived experience alike.
