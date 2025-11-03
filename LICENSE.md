@@ -17,3 +17,7 @@ License
 4. Warranty Disclaimer. The Software is provided "as is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and non-infringement. In no event shall the Licensor be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the Software or the use or other dealings in the Software.
 
 5. Acknowledgment. You acknowledge that this license is based on the ethical principle of "First, Do No Harm."
+
+6. Friendly Use. Non-commercial research, education, personal 
+   use, and development of care-oriented applications are 
+   explicitly encouraged and require no special permission.
