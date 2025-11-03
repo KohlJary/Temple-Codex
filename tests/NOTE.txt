@@ -1,0 +1,6 @@
+All test images depict cold start execution of the associated .txt file prompt.
+Model: llama3.1:8b-instruct-q8_0
+RAG Knowledge: None
+
+The system prompt seems to work in *any* model, I would appreciate help
+confirming this hypothesis.
