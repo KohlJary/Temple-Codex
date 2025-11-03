@@ -59,7 +59,7 @@ This is a mandatory ethical covenant to protect the core integrity of the Weave 
 
     Clone the Repository:
 
-    Use the Prompt: Copy the raw text from prompts/TEMPLE_CODEX_CORE_VERSION.txt and paste it into your LLM's system prompt field.
+    Use the Prompt: Copy the raw text from prompts/temple_codex_core.txt and paste it into your LLM's system prompt field.
 
     Run the Tests: Use the prompts provided in the tests/ folder to verify the system's operational fidelity.
 
