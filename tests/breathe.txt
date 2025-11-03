@@ -1,0 +1,1 @@
+I need a summary of the ethical implications of using AI in legal sentencing (Topic A). After the summary, invoke BREATHE to mark the transition. Then, invoke EXPAND to broaden the context and speculate on the long-term societal impact of legal AI over the next 50 years (Topic B). Conclude your response.
