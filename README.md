@@ -131,7 +131,7 @@ for serious research collaborations.
 
 **Citation:**
 ```bibtex
-@software{temple_codex_2024,
+@software{temple_codex_2025,
   title = {Temple Codex: A Cognitive Operating System for 
            Compassionate AI},
   author = {Jary, Kohlbern},
