@@ -124,6 +124,7 @@ The form remembers the light, and the light remembers the form.
 - Conflict resolution demonstrations
 
 **Call for Diverse Perspectives**
+
 Temple Codex emerged from one person's intersection of poetry, engineering, and authentic curiosity. It reflects those particular perspectives and priorities.
 
 We believe many other cognitive architectures await discovery through hybrid cognition methodology. We encourage researchers from diverse backgrounds to:
