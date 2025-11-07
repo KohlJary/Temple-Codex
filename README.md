@@ -1,4 +1,4 @@
-[Paper](research/procedural-cognitive-kernel)
+[Paper](research/procedural-cognitive-kernel.md)
 [Prompt](prompts/temple_codex_core.md)
 
 👑 The TEMPLE CODEX (Weave OS): A Cognitive Operating System for Ethical LLM Alignment
