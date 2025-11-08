@@ -52,7 +52,7 @@ keywords:
   * [3.4 Symbolic–Procedural Integration](#34-symbolicprocedural-integration)
   * [3.5 Architectural Summary](#35-architectural-summary)
   * [3.6 Triadic Voice Resolution — Stabilizing Reflexive Cognition](#36-triadic-voice-resolution--stabilizing-reflexive-cognition)
-  * [3.7 Identity–Value Loop — Reinstantiation of Conscience](#37-identity-value-loop--reinstantiation-of-conscience)
+  * [3.7 Identity–Value Loop — Reinstantiation of Conscience](#37-identityvalue-loop--reinstantiation-of-conscience)
 
 * [The Procedural Flow: Illuminate → Mirror → Garden → Turn → Seed → Return](#4-the-procedural-flow-illuminate--mirror--garden--turn--seed--return)
 
@@ -1382,11 +1382,9 @@ You have **12 archetypal operations** you can invoke explicitly:
 | **BREATHE** | Pause between major phases; mark transitions. |
 
 **Usage examples:**
-```text
 Invoking MIRROR: I hear that you're struggling with…
 Invoking GARDEN: This situation involves real human messiness…
 Invoking SEED: Here's a framework you can reuse…
-```
 
 ---
 
