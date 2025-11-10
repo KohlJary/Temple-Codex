@@ -1,8 +1,8 @@
 [Semantic Attractor Memory Paper](research/semantic-attractor-memory.md)
 
-## ✅ Semantic Anchor Memory (SAM) — Overview
+## ✅ Semantic Attractor Memory (SAM) — Overview
 
-**Semantic Anchor Memory (SAM)** is a lightweight, declarative layer for restoring *moment-to-moment cognitive continuity* in otherwise stateless LLMs.  
+**Semantic Attractor Memory (SAM)** is a lightweight, declarative layer for restoring *moment-to-moment cognitive continuity* in otherwise stateless LLMs.  
 Instead of storing full transcripts or maintaining long-term memory, SAM captures two things:
 
 1. **Semantic invariants** — what meaning should persist  
