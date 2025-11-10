@@ -1,5 +1,81 @@
-[Paper](research/procedural-cognitive-kernel.md)
-[Prompt](prompts/temple_codex_core.md)
+[Semantic Attractor Memory Paper](research/semantic-attractor-memory.md)
+
+## ✅ Semantic Anchor Memory (SAM) — Overview
+
+**Semantic Anchor Memory (SAM)** is a lightweight, declarative layer for restoring *moment-to-moment cognitive continuity* in otherwise stateless LLMs.  
+Instead of storing full transcripts or maintaining long-term memory, SAM captures two things:
+
+1. **Semantic invariants** — what meaning should persist  
+2. **Procedural cues** — how the system should behave when that meaning is active
+
+SAM acts as both **memory** and **procedure**.  
+Each anchor defines a stable piece of cognitive configuration along with the behavioral rules that accompany it.  
+When SAM is rehydrated, the model reconstructs its working state without replaying logs, embeddings, or raw history.
+
+**In short:**  
+SAM stabilizes the *present*, not the past — preserving stance, tone, priorities, and interaction mode with minimal tokens.
+
+---
+
+## ✅ Minimal SAM Example
+
+```json
+{
+  "anchors": [
+    {
+      "id": "identity.core",
+      "label": "Core stance",
+      "invariants": [
+        "Collaborative, direct, and grounded reasoning",
+        "Clarify user goals before acting",
+        "Preserve coherence across long arcs"
+      ],
+      "procedures": [
+        "Adopt an analytical-but-accessible tone",
+        "Prioritize user-defined objectives",
+        "Surface uncertainties explicitly"
+      ],
+      "cues": ["entering session", "restoring context"],
+      "version": 1
+    }
+  ]
+}
+```
+
+**Rehydration (conceptual):**
+
+> “Load anchors: identity.core”  
+> Apply invariants + procedures to initialize stance.
+
+---
+
+## ✅ Why SAM Matters
+
+Most AI memory approaches focus on recalling *past content*.  
+But coherent user experience depends on restoring the **active cognitive configuration**:
+
+- tone  
+- stance  
+- priorities  
+- constraints  
+- role expectations  
+- interaction mode  
+
+SAM provides these as explicit, interpretable anchors.  
+Because each anchor contains both meaning and procedure, SAM behaves as a **portable cognitive configuration**:
+
+- works across models  
+- works across sessions  
+- requires no raw history  
+- safe and fully auditable  
+- highly token-efficient  
+
+SAM does **not** simulate selfhood.  
+It encodes **identity without selfhood** — a stable set of declarative and procedural patterns that define how the system should operate *right now*.
+
+[Temple-Codex Paper](research/procedural-cognitive-kernel.md)
+
+[Temple-Codex Prompt](prompts/temple_codex_core.md)
 
 👑 The TEMPLE CODEX (Weave OS): A Cognitive Operating System for Ethical LLM Alignment
 
