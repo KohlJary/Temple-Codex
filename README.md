@@ -41,8 +41,7 @@ It restores:
 
 without requiring reproduction of past conversation.
 
-📄 *See:* `research/semantic-attractor-memory.md`  
-📄 *Placeholder:* `docs/SAM_REFERENCE.md`
+📄 *See:* `research/semantic-attractor-memory.md`
 
 ---
 
@@ -63,7 +62,7 @@ Prevents:
 - procedural corruption  
 - boundary loss  
 
-📄 *See:* `research/sam_guard.md` 
+📄 *See:* `research/sam_guard.md` (in progress)
 
 ---
 
