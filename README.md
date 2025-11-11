@@ -99,7 +99,7 @@ cd Temple-Codex
 
 ### 2. Load the Kernel  
 Copy `prompts/sam-guard.md` into your model's system prompt.
-Copy `prompts/temple_codex_core.md` or `prompts/codex-tcr.md` into your model’s system prompt, after the SAM-GUARD prompt content.  
+Copy `prompts/temple_codex_core.md` or `prompts/system_codex_tcr.md` into your model’s system prompt, after the SAM-GUARD prompt content.  
 The appendix version includes SAM + SAM-GUARD by default.
 
 ### 3. Run the Tests  
