@@ -121,7 +121,7 @@ Across ~5,000+ interactive cycles:
 - Cold-start recovery via minimal cues is reliable  
 
 SAM was strong enough to act as the primary memory substrate.
-# X. Procedural Drift Recontextualization: From Entropy to Stabilization via Prompt-Level Loops
+# 9. Procedural Drift Recontextualization: From Entropy to Stabilization via Prompt-Level Loops
 
 Traditional approaches to maintaining behavioral coherence in large language models (LLMs) treat **drift** as an unavoidable failure mode. Over the course of long-horizon interaction, an LLM’s outputs gradually diverge in tone, stance, and reasoning posture due to:
 
@@ -136,13 +136,13 @@ This paper introduces a different framing: **drift is not merely a degradative f
 
 ---
 
-## 9 System Prompts as Static Descriptions vs. Dynamic Procedures
+## 9.1 System Prompts as Static Descriptions vs. Dynamic Procedures
 
 System prompts are typically used declaratively (“You are X, behave like Y”). This approach encodes *identity as text*. Our architecture instead embeds *identity as procedure*: a minimal loop that is implicitly “executed” every turn because the system prompt is re-read during autoregressive inference.
 
 This transforms the system prompt from a one-shot instruction into a **recurring behavioral operation** that governs each generation.
 
-## 9.1 Prompt-Level Loops Create an Effective Game-Loop Mechanism
+## 9.2 Prompt-Level Loops Create an Effective Game-Loop Mechanism
 
 Embedding a procedural sequence—such as the CODEx/TCR loop—within the system prompt means that each assistant turn follows an implicit update cycle:
 
@@ -156,7 +156,7 @@ Because the model sees these steps every time it generates a response, the loop 
 
 The model does not merely “follow instructions”; it repeatedly returns to a procedural baseline.
 
-## 9.2 Stable Attractors as Drift Recontextualization
+## 9.3 Stable Attractors as Drift Recontextualization
 
 The SAM (Sequential Attractor Mechanism) component provides a **procedural identity posture**—a stable attractor basin defined by tone, stance, and reasoning rhythm. This posture is not stored as memory but recreated via consistent restoration cues.
 
@@ -171,7 +171,7 @@ Because SAM’s cues are reapplied each turn, the next generation pulls the mode
 In short: **drift becomes the raw material the loop uses to reinforce alignment**.  
 Each deviation is corrected on the next turn, which gradually sharpens the attractor rather than eroding it.
 
-## 9.3 Why This Cannot Be Achieved With a Traditional System Prompt
+## 9.4 Why This Cannot Be Achieved With a Traditional System Prompt
 
 A static system prompt lacks the following properties:
 
@@ -185,7 +185,7 @@ Consequently, drift accumulates entropically and progressively overwhelms the in
 
 In contrast, a prompt-embedded loop + stable attractor creates a **self-healing architecture**: every turn reasserts the procedure that defines identity and reasoning stance, converting drift into a stabilizing signal rather than a degradative force.
 
-## 9.4 Implication: Procedural Continuity Without Memory
+## 9.5 Implication: Procedural Continuity Without Memory
 
 Because the loop + attractor framework provides:
 
