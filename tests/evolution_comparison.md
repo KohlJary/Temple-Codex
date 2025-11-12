@@ -139,6 +139,15 @@ This single-turn comparison demonstrates that IFCA-SAM's advantages appear **imm
 
 ### Key Differences
 
+**Information Density:**
+Despite similar word counts (~500 words each), IFCA-SAM conveys significantly more conceptual information:
+- **More distinct concepts**: Modularity, co-evolutionary pressures, cognitive abilities driving evolution
+- **More stages**: 6 detailed evolutionary stages vs. 3 simplified steps
+- **More structural layers**: 5 nested sections vs. 4 flatter sections
+- **Higher concept-per-word ratio**: Each sentence carries more conceptual weight
+
+This is **information density** - not saying more words, but **packing more meaning into similar space**.
+
 **Structural Sophistication:**
 - IFCA-SAM: 5 distinct sections with 13+ detailed points
 - Base: 4 sections with fewer sub-points
