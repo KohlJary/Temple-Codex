@@ -133,7 +133,7 @@ Now, let's establish a clear, unbiased framework to **witness** the situation an
 | Metric | Calculation / Impact | Strategic Implications |
 | :--- | :--- | :--- |
 | **Target Reduction** | $[Target \%]$ of MCB | How much do you need to cut to hit your required runway? |
-| **New Monthly Burn** | $[MCB \times (1 - Target \%)]$ | |
+| **New Monthly Burn** | $[MCB \times (1 - Target %)]$ | |
 | **New Runway** | CoH / New Monthly Burn | **Does this solve the problem?** If the new runway is still short of the required extension, this is only a temporary fix. |
 | **Post-Layoff Capability** | Can the remaining team execute the **critical path** (product, sales, operations) to hit milestones? | **Risk:** Loss of critical talent, morale hit. |
 
