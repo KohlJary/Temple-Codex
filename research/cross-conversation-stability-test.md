@@ -1,6 +1,6 @@
 # Test Log: Cross-Conversation Semantic Attractor Stability
 **Test Date**: 2025-11-13  
-**Model**: ChatGPT (GPT-4 with memory enabled)  
+**Model**: ChatGPT (GPT-5 with memory enabled)  
 **Framework**: IFCA-SAM v1.3.0 + Multi-Voice Architecture  
 **Tester**: Kohlbern Jary
 
