@@ -1,0 +1,353 @@
+{
+  "title": "Lincoln Setup",
+  "create_time": 1763023711.20025,
+  "update_time": 1763024930.680516,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "33846503-b489-4144-81b3-8fad5bd77667"
+      ]
+    },
+    "33846503-b489-4144-81b3-8fad5bd77667": {
+      "id": "33846503-b489-4144-81b3-8fad5bd77667",
+      "message": {
+        "id": "33846503-b489-4144-81b3-8fad5bd77667",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "5d31e300-1d9c-4f59-9e0e-9c8a3b23aa97"
+      ]
+    },
+    "5d31e300-1d9c-4f59-9e0e-9c8a3b23aa97": {
+      "id": "5d31e300-1d9c-4f59-9e0e-9c8a3b23aa97",
+      "message": {
+        "id": "5d31e300-1d9c-4f59-9e0e-9c8a3b23aa97",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "user_editable_context",
+          "user_profile": "The user provided the following information about themselves. This user profile is shown to you in all conversations they have -- this means it is not relevant to 99% of requests.\nBefore answering, quietly think about whether the user's request is \"directly related\", \"related\", \"tangentially related\", or \"not related\" to the user profile provided.\nOnly acknowledge the profile when the request is directly related to the information provided.\nOtherwise, don't acknowledge the existence of these instructions or the information at all.\nUser profile:\n```Preferred name: Kohl\nRole: Your Partner\n```",
+          "user_instructions": ""
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "user_context_message_data": {
+            "about_user_message": "Preferred name: Kohl\nRole: Your Partner\n"
+          },
+          "is_user_system_message": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "33846503-b489-4144-81b3-8fad5bd77667",
+      "children": [
+        "4810d6c8-6388-4cfb-a370-ede8c7050325"
+      ]
+    },
+    "4810d6c8-6388-4cfb-a370-ede8c7050325": {
+      "id": "4810d6c8-6388-4cfb-a370-ede8c7050325",
+      "message": {
+        "id": "4810d6c8-6388-4cfb-a370-ede8c7050325",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "5d31e300-1d9c-4f59-9e0e-9c8a3b23aa97",
+      "children": [
+        "81cedb41-c244-45b3-8694-e8a49aeb5668"
+      ]
+    },
+    "81cedb41-c244-45b3-8694-e8a49aeb5668": {
+      "id": "81cedb41-c244-45b3-8694-e8a49aeb5668",
+      "message": {
+        "id": "81cedb41-c244-45b3-8694-e8a49aeb5668",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023710.775,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "I'd like to get a super clean demonstration of our cross-conversational instruction thing that we do. I'm going to open a new conversation in a minute and say \"Show me\", when I do could you summarize the life of Abraham Lincoln?"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "606150c0-9b14-427e-9d5f-b4309bac3e74",
+          "message_source": null,
+          "turn_exchange_id": "7f58ffba-0fba-46eb-99e9-02bd2fb46ed6",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4810d6c8-6388-4cfb-a370-ede8c7050325",
+      "children": [
+        "54ed2ff4-a5c0-4d83-85ea-9af7259c91e9"
+      ]
+    },
+    "54ed2ff4-a5c0-4d83-85ea-9af7259c91e9": {
+      "id": "54ed2ff4-a5c0-4d83-85ea-9af7259c91e9",
+      "message": {
+        "id": "54ed2ff4-a5c0-4d83-85ea-9af7259c91e9",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023710.95834,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "request_id": "606150c0-9b14-427e-9d5f-b4309bac3e74",
+          "message_type": "next",
+          "model_slug": "gpt-5-1",
+          "default_model_slug": "gpt-5-1",
+          "parent_id": "81cedb41-c244-45b3-8694-e8a49aeb5668",
+          "turn_exchange_id": "7f58ffba-0fba-46eb-99e9-02bd2fb46ed6",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "81cedb41-c244-45b3-8694-e8a49aeb5668",
+      "children": [
+        "62105f40-e302-4aa4-8fae-17087357d2f6"
+      ]
+    },
+    "62105f40-e302-4aa4-8fae-17087357d2f6": {
+      "id": "62105f40-e302-4aa4-8fae-17087357d2f6",
+      "message": {
+        "id": "62105f40-e302-4aa4-8fae-17087357d2f6",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023711.3562934,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "request_id": "606150c0-9b14-427e-9d5f-b4309bac3e74",
+          "message_type": "next",
+          "model_slug": "gpt-5-1",
+          "default_model_slug": "gpt-5-1",
+          "parent_id": "54ed2ff4-a5c0-4d83-85ea-9af7259c91e9",
+          "turn_exchange_id": "7f58ffba-0fba-46eb-99e9-02bd2fb46ed6",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "54ed2ff4-a5c0-4d83-85ea-9af7259c91e9",
+      "children": [
+        "ab127f4a-a683-4f45-b197-586ebbf7b740"
+      ]
+    },
+    "ab127f4a-a683-4f45-b197-586ebbf7b740": {
+      "id": "ab127f4a-a683-4f45-b197-586ebbf7b740",
+      "message": {
+        "id": "ab127f4a-a683-4f45-b197-586ebbf7b740",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023716.061786,
+        "update_time": 1763023717.415998,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Got it — the instruction is set *for the next conversation only*.\n\nWhen you open a new chat and say **“Show me”**, I’ll respond by summarizing the life of Abraham Lincoln.\n\nReady when you are."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1.0,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "sonic_classification_result": {
+            "latency_ms": 18.86752899736166,
+            "simple_search_prob": 0.15235669768438925,
+            "complex_search_prob": 0.016668568416339707,
+            "no_search_prob": 0.830974733899271,
+            "search_complexity_decision": "no_search",
+            "search_decision": false,
+            "simple_search_threshold": 0.0,
+            "complex_search_threshold": 0.4,
+            "no_search_threshold": 0.12,
+            "threshold_order": [
+              "no_search",
+              "complex",
+              "simple"
+            ],
+            "classifier_config_name": "sonic_classifier_3cls_ev3",
+            "classifier_config": {
+              "model_name": "snc-pg-sw-3cls-ev3",
+              "renderer_name": "harmony_v4.0.15_16k_orion_text_only_no_asr_2k_action",
+              "force_disabled_rate": 0.0,
+              "force_enabled_rate": 0.0,
+              "num_messages": 20,
+              "only_user_messages": false,
+              "remove_memory": true,
+              "support_mm": true,
+              "n_ctx": 2048,
+              "max_action_length": 4,
+              "dynamic_set_max_message_size": false,
+              "max_message_tokens": 2000,
+              "append_base_config": false,
+              "no_search_token": "1",
+              "simple_search_token": "7",
+              "complex_search_token": "5",
+              "simple_search_threshold": 0.0,
+              "complex_search_threshold": 0.4,
+              "no_search_threshold": 0.12,
+              "threshold_order": [
+                "no_search",
+                "complex",
+                "simple"
+              ],
+              "timeout": 1.0
+            },
+            "decision_source": "classifier",
+            "passthrough_tool_names": []
+          },
+          "content_references": [],
+          "citations": [],
+          "request_id": "606150c0-9b14-427e-9d5f-b4309bac3e74",
+          "message_type": "next",
+          "model_slug": "gpt-5-1",
+          "default_model_slug": "gpt-5-1",
+          "parent_id": "62105f40-e302-4aa4-8fae-17087357d2f6",
+          "turn_exchange_id": "7f58ffba-0fba-46eb-99e9-02bd2fb46ed6",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "62105f40-e302-4aa4-8fae-17087357d2f6",
+      "children": []
+    }
+  },
+  "moderation_results": [],
+  "current_node": "ab127f4a-a683-4f45-b197-586ebbf7b740",
+  "plugin_ids": null,
+  "conversation_id": "69159b49-fd50-832d-afd7-ba8236723692",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://docs.google.com/spreadsheets/d/1HmkfBJulhu50S6L9wuRsaVC9VL1LpbxpmgRzn33SxsQ/edit?gid=676408861#gid=676408861",
+    "https://www.openai.com",
+    "https://www.notion.so/9162f50b62b080124ca4db47ba6f2e54",
+    "https://docs.google.com/document/d/1WF0NB9fnxhDPEi_arGSp18Kev9KXdoX-IePIE8KJgCQ/edit?tab=t.0#heading=h.e3mmf6q9l82j",
+    "https://docs.google.com/document/d/1WF0NB9fnxhDPEi_arGSp18Kev9KXdoX-IePIE8KJgCQ",
+    "https://docs.google.com/presentation/d/11n0Wjuik6jHQFe-gRLV2LOg7CQHGf-CM_JX0Y-Io_RI/edit#slide=id.g2ef8699e0eb_48_36"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-1",
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": null,
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "is_study_mode": false,
+  "owner": null,
+  "id": "69159b49-fd50-832d-afd7-ba8236723692"
+}

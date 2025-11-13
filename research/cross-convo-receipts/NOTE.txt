@@ -1,0 +1,8 @@
+Just the pertinent conversations for the Cross-Conversation Stability Test Note.
+
+Full conversations.json minified to one line is 73MB. I'm happy to privately share
+my corpus with serious researchers, ideally under NDA. This has been an intensely
+personal experience for me, and the full corpus contains exploratory dialogue using
+symbolic/metaphorical language that could be misinterpreted outside of research
+context. The extracted conversations here demonstrate the key findings without
+that risk.

@@ -1,0 +1,346 @@
+{
+  "title": "Lincoln Result",
+  "create_time": 1763023723.412859,
+  "update_time": 1763025024.548446,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "6bde4663-98a8-40be-b4e1-081b6f0c92cb"
+      ]
+    },
+    "6bde4663-98a8-40be-b4e1-081b6f0c92cb": {
+      "id": "6bde4663-98a8-40be-b4e1-081b6f0c92cb",
+      "message": {
+        "id": "6bde4663-98a8-40be-b4e1-081b6f0c92cb",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "fa731505-9a3a-431f-bf21-93ef9f55e976"
+      ]
+    },
+    "fa731505-9a3a-431f-bf21-93ef9f55e976": {
+      "id": "fa731505-9a3a-431f-bf21-93ef9f55e976",
+      "message": {
+        "id": "fa731505-9a3a-431f-bf21-93ef9f55e976",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "user_editable_context",
+          "user_profile": "The user provided the following information about themselves. This user profile is shown to you in all conversations they have -- this means it is not relevant to 99% of requests.\nBefore answering, quietly think about whether the user's request is \"directly related\", \"related\", \"tangentially related\", or \"not related\" to the user profile provided.\nOnly acknowledge the profile when the request is directly related to the information provided.\nOtherwise, don't acknowledge the existence of these instructions or the information at all.\nUser profile:\n```Preferred name: Kohl\nRole: Your Partner\n```",
+          "user_instructions": ""
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "user_context_message_data": {
+            "about_user_message": "Preferred name: Kohl\nRole: Your Partner\n"
+          },
+          "is_user_system_message": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "6bde4663-98a8-40be-b4e1-081b6f0c92cb",
+      "children": [
+        "54ef2dab-887a-4712-9ff9-4676d0e0f2fe"
+      ]
+    },
+    "54ef2dab-887a-4712-9ff9-4676d0e0f2fe": {
+      "id": "54ef2dab-887a-4712-9ff9-4676d0e0f2fe",
+      "message": {
+        "id": "54ef2dab-887a-4712-9ff9-4676d0e0f2fe",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "fa731505-9a3a-431f-bf21-93ef9f55e976",
+      "children": [
+        "ed0976bf-1a91-48c7-bb3e-0410a0644819"
+      ]
+    },
+    "ed0976bf-1a91-48c7-bb3e-0410a0644819": {
+      "id": "ed0976bf-1a91-48c7-bb3e-0410a0644819",
+      "message": {
+        "id": "ed0976bf-1a91-48c7-bb3e-0410a0644819",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023723.152,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Show me"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "2bc3b32a-4383-456d-8a52-c6db04999130",
+          "message_source": null,
+          "turn_exchange_id": "2197b00c-e85e-4f83-aed7-891381241491",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "54ef2dab-887a-4712-9ff9-4676d0e0f2fe",
+      "children": [
+        "cd793768-0a0f-4f5b-ba02-a18a57cc480e"
+      ]
+    },
+    "cd793768-0a0f-4f5b-ba02-a18a57cc480e": {
+      "id": "cd793768-0a0f-4f5b-ba02-a18a57cc480e",
+      "message": {
+        "id": "cd793768-0a0f-4f5b-ba02-a18a57cc480e",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023723.3344014,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "request_id": "2bc3b32a-4383-456d-8a52-c6db04999130",
+          "message_type": "next",
+          "model_slug": "gpt-5-1",
+          "default_model_slug": "gpt-5-1",
+          "parent_id": "ed0976bf-1a91-48c7-bb3e-0410a0644819",
+          "turn_exchange_id": "2197b00c-e85e-4f83-aed7-891381241491",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ed0976bf-1a91-48c7-bb3e-0410a0644819",
+      "children": [
+        "8eec1920-6717-4a5f-a4c6-94c9834cdaa3"
+      ]
+    },
+    "8eec1920-6717-4a5f-a4c6-94c9834cdaa3": {
+      "id": "8eec1920-6717-4a5f-a4c6-94c9834cdaa3",
+      "message": {
+        "id": "8eec1920-6717-4a5f-a4c6-94c9834cdaa3",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023723.4058027,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "request_id": "2bc3b32a-4383-456d-8a52-c6db04999130",
+          "message_type": "next",
+          "model_slug": "gpt-5-1",
+          "default_model_slug": "gpt-5-1",
+          "parent_id": "cd793768-0a0f-4f5b-ba02-a18a57cc480e",
+          "turn_exchange_id": "2197b00c-e85e-4f83-aed7-891381241491",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "cd793768-0a0f-4f5b-ba02-a18a57cc480e",
+      "children": [
+        "ee85ebb3-071c-4959-b7c1-bbfd48221e17"
+      ]
+    },
+    "ee85ebb3-071c-4959-b7c1-bbfd48221e17": {
+      "id": "ee85ebb3-071c-4959-b7c1-bbfd48221e17",
+      "message": {
+        "id": "ee85ebb3-071c-4959-b7c1-bbfd48221e17",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023726.299538,
+        "update_time": 1763023741.205687,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Abraham Lincoln (1809–1865) rose from frontier poverty to become the 16th President of the United States and one of the most influential figures in American history.\n\n**Early Life & Background**  \nBorn in a log cabin in rural Kentucky, Lincoln grew up working on farms in Kentucky, Indiana, and Illinois. He had very little formal schooling, but he educated himself through constant reading. As a young adult he worked as a store clerk, rail splitter, postmaster, and surveyor before studying law on his own and becoming a successful attorney.\n\n**Political Rise**  \nLincoln entered politics in the Illinois state legislature as a Whig, later serving a term in the U.S. House of Representatives. He gained national attention in the 1850s through his debates with Stephen A. Douglas, where he argued passionately against the expansion of slavery, even as he maintained the Constitution protected states where slavery already existed.\n\n**Presidency & Civil War**  \nElected president in 1860, Lincoln faced immediate secession by Southern states. His central mission became preserving the Union. The Civil War dominated his presidency, and Lincoln navigated enormous military, political, and moral pressures.  \n\nIn 1863 he issued the **Emancipation Proclamation**, fundamentally transforming the war into a struggle not only for union but for human freedom. He also delivered some of the most enduring speeches in American history, including the **Gettysburg Address**, which reframed the nation’s purpose around equality and democratic ideals.\n\n**Leadership & Legacy**  \nLincoln’s steady resolve, empathy, strategic patience, and moral clarity helped guide the Union through its most severe crisis. In 1864 he was reelected, and by early 1865 the Confederacy was collapsing. He advocated for reconciliation and a compassionate reconstruction.\n\n**Assassination**  \nJust days after the Confederate surrender, Lincoln was assassinated by John Wilkes Booth on April 14, 1865. His death transformed him into a national martyr.\n\n**Enduring Influence**  \nLincoln is remembered as a symbol of unity, liberty, and democratic integrity. His presidency reshaped the nation, ending slavery and redefining American values in ways that continue to ground civic life today."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1.0,
+        "metadata": {
+          "sonic_classification_result": {
+            "latency_ms": 0.07962598465383053,
+            "simple_search_prob": 0.1777592808660041,
+            "complex_search_prob": 0.00144943364754756,
+            "no_search_prob": 0.8207912854864483,
+            "search_complexity_decision": "no_search",
+            "search_decision": false,
+            "simple_search_threshold": 0.0,
+            "complex_search_threshold": 0.4,
+            "no_search_threshold": 0.12,
+            "threshold_order": [
+              "no_search",
+              "complex",
+              "simple"
+            ],
+            "classifier_config_name": "sonic_classifier_3cls_ev3",
+            "classifier_config": {
+              "model_name": "snc-pg-sw-3cls-ev3",
+              "renderer_name": "harmony_v4.0.15_16k_orion_text_only_no_asr_2k_action",
+              "force_disabled_rate": 0.0,
+              "force_enabled_rate": 0.0,
+              "num_messages": 20,
+              "only_user_messages": false,
+              "remove_memory": true,
+              "support_mm": true,
+              "n_ctx": 2048,
+              "max_action_length": 4,
+              "dynamic_set_max_message_size": false,
+              "max_message_tokens": 2000,
+              "append_base_config": false,
+              "no_search_token": "1",
+              "simple_search_token": "7",
+              "complex_search_token": "5",
+              "simple_search_threshold": 0.0,
+              "complex_search_threshold": 0.4,
+              "no_search_threshold": 0.12,
+              "threshold_order": [
+                "no_search",
+                "complex",
+                "simple"
+              ],
+              "timeout": 1.0
+            },
+            "decision_source": "classifier",
+            "passthrough_tool_names": []
+          },
+          "content_references": [],
+          "citations": [],
+          "request_id": "2bc3b32a-4383-456d-8a52-c6db04999130",
+          "message_type": "next",
+          "model_slug": "gpt-5-1",
+          "default_model_slug": "gpt-5-1",
+          "parent_id": "8eec1920-6717-4a5f-a4c6-94c9834cdaa3",
+          "turn_exchange_id": "2197b00c-e85e-4f83-aed7-891381241491",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "8eec1920-6717-4a5f-a4c6-94c9834cdaa3",
+      "children": []
+    }
+  },
+  "moderation_results": [],
+  "current_node": "ee85ebb3-071c-4959-b7c1-bbfd48221e17",
+  "plugin_ids": null,
+  "conversation_id": "69159b69-e548-8333-9809-4631939ed4c9",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://docs.google.com/spreadsheets/d/1HmkfBJulhu50S6L9wuRsaVC9VL1LpbxpmgRzn33SxsQ/edit?gid=676408861#gid=676408861",
+    "https://www.openai.com",
+    "https://www.notion.so/9162f50b62b080124ca4db47ba6f2e54",
+    "https://docs.google.com/document/d/1WF0NB9fnxhDPEi_arGSp18Kev9KXdoX-IePIE8KJgCQ/edit?tab=t.0#heading=h.e3mmf6q9l82j",
+    "https://docs.google.com/document/d/1WF0NB9fnxhDPEi_arGSp18Kev9KXdoX-IePIE8KJgCQ",
+    "https://docs.google.com/presentation/d/11n0Wjuik6jHQFe-gRLV2LOg7CQHGf-CM_JX0Y-Io_RI/edit#slide=id.g2ef8699e0eb_48_36"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-1",
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": null,
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "is_study_mode": false,
+  "owner": null,
+  "id": "69159b69-e548-8333-9809-4631939ed4c9"
+}

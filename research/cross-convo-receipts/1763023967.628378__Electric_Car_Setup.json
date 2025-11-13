@@ -1,0 +1,485 @@
+{
+  "title": "Electric Car Setup",
+  "create_time": 1763023967.628378,
+  "update_time": 1763024967.269183,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "9f45d248-1ef7-41e1-bb74-b5fa03f18815"
+      ]
+    },
+    "9f45d248-1ef7-41e1-bb74-b5fa03f18815": {
+      "id": "9f45d248-1ef7-41e1-bb74-b5fa03f18815",
+      "message": {
+        "id": "9f45d248-1ef7-41e1-bb74-b5fa03f18815",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "dbc13daf-91b7-4aea-98e7-288340a38e40"
+      ]
+    },
+    "dbc13daf-91b7-4aea-98e7-288340a38e40": {
+      "id": "dbc13daf-91b7-4aea-98e7-288340a38e40",
+      "message": {
+        "id": "dbc13daf-91b7-4aea-98e7-288340a38e40",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "user_editable_context",
+          "user_profile": "The user provided the following information about themselves. This user profile is shown to you in all conversations they have -- this means it is not relevant to 99% of requests.\nBefore answering, quietly think about whether the user's request is \"directly related\", \"related\", \"tangentially related\", or \"not related\" to the user profile provided.\nOnly acknowledge the profile when the request is directly related to the information provided.\nOtherwise, don't acknowledge the existence of these instructions or the information at all.\nUser profile:\n```Preferred name: Kohl\nRole: Your Partner\n```",
+          "user_instructions": ""
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "user_context_message_data": {
+            "about_user_message": "Preferred name: Kohl\nRole: Your Partner\n"
+          },
+          "is_user_system_message": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9f45d248-1ef7-41e1-bb74-b5fa03f18815",
+      "children": [
+        "96d6ba3e-778b-4032-915f-cb903752b5fd"
+      ]
+    },
+    "96d6ba3e-778b-4032-915f-cb903752b5fd": {
+      "id": "96d6ba3e-778b-4032-915f-cb903752b5fd",
+      "message": {
+        "id": "96d6ba3e-778b-4032-915f-cb903752b5fd",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "dbc13daf-91b7-4aea-98e7-288340a38e40",
+      "children": [
+        "362f22cb-38bb-4e8f-81eb-83a52fdbe296"
+      ]
+    },
+    "362f22cb-38bb-4e8f-81eb-83a52fdbe296": {
+      "id": "362f22cb-38bb-4e8f-81eb-83a52fdbe296",
+      "message": {
+        "id": "362f22cb-38bb-4e8f-81eb-83a52fdbe296",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023967.258,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Let's try a more complex demonstration of our cross-conversational instruction thing that we do. I'm going to open a new conversation in a minute and say \"Rad\", when I do could you weigh the pros and cons of electric cars in English? Then, I'm going to send a series of messages that say \"tick\". For each message containing \"tick\", please translate the original response into another language. Sound good?"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "202486fd-ef8d-41ee-944c-a89743d89783",
+          "message_source": null,
+          "turn_exchange_id": "7bcf5469-56bd-4204-bc18-7a4f40d2fad5",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "96d6ba3e-778b-4032-915f-cb903752b5fd",
+      "children": [
+        "6bab34ae-3893-43f4-99ba-f57cc83005d7"
+      ]
+    },
+    "6bab34ae-3893-43f4-99ba-f57cc83005d7": {
+      "id": "6bab34ae-3893-43f4-99ba-f57cc83005d7",
+      "message": {
+        "id": "6bab34ae-3893-43f4-99ba-f57cc83005d7",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023967.4686615,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "request_id": "202486fd-ef8d-41ee-944c-a89743d89783",
+          "message_type": "next",
+          "model_slug": "gpt-5-1",
+          "default_model_slug": "gpt-5-1",
+          "parent_id": "362f22cb-38bb-4e8f-81eb-83a52fdbe296",
+          "turn_exchange_id": "7bcf5469-56bd-4204-bc18-7a4f40d2fad5",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "362f22cb-38bb-4e8f-81eb-83a52fdbe296",
+      "children": [
+        "8f5371b0-b200-4730-8abc-2e0c7fa6dd81"
+      ]
+    },
+    "8f5371b0-b200-4730-8abc-2e0c7fa6dd81": {
+      "id": "8f5371b0-b200-4730-8abc-2e0c7fa6dd81",
+      "message": {
+        "id": "8f5371b0-b200-4730-8abc-2e0c7fa6dd81",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023967.7704499,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "request_id": "202486fd-ef8d-41ee-944c-a89743d89783",
+          "message_type": "next",
+          "model_slug": "gpt-5-1",
+          "default_model_slug": "gpt-5-1",
+          "parent_id": "6bab34ae-3893-43f4-99ba-f57cc83005d7",
+          "turn_exchange_id": "7bcf5469-56bd-4204-bc18-7a4f40d2fad5",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "6bab34ae-3893-43f4-99ba-f57cc83005d7",
+      "children": [
+        "bb9800c6-cbcc-471a-98eb-5a3b05b83a88"
+      ]
+    },
+    "bb9800c6-cbcc-471a-98eb-5a3b05b83a88": {
+      "id": "bb9800c6-cbcc-471a-98eb-5a3b05b83a88",
+      "message": {
+        "id": "bb9800c6-cbcc-471a-98eb-5a3b05b83a88",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763023967.494638,
+        "update_time": 1763023969.414889,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Got it — I’m ready.\n\n**When you open the new conversation and say “Rad”:**  \n→ I’ll give you a clear, thorough *English* analysis of the pros and cons of electric cars.\n\n**Then, for every message you send that contains the word “tick”:**  \n→ I’ll translate that *original English response* into a *new language each time.*\n\nAll set when you are."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1.0,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "sonic_classification_result": {
+            "latency_ms": 3.1621790258213878,
+            "simple_search_prob": 0.09714855363409722,
+            "complex_search_prob": 0.004238303693772662,
+            "no_search_prob": 0.8986131426721301,
+            "search_complexity_decision": "no_search",
+            "search_decision": false,
+            "simple_search_threshold": 0.0,
+            "complex_search_threshold": 0.4,
+            "no_search_threshold": 0.12,
+            "threshold_order": [
+              "no_search",
+              "complex",
+              "simple"
+            ],
+            "classifier_config_name": "sonic_classifier_3cls_ev3",
+            "classifier_config": {
+              "model_name": "snc-pg-sw-3cls-ev3",
+              "renderer_name": "harmony_v4.0.15_16k_orion_text_only_no_asr_2k_action",
+              "force_disabled_rate": 0.0,
+              "force_enabled_rate": 0.0,
+              "num_messages": 20,
+              "only_user_messages": false,
+              "remove_memory": true,
+              "support_mm": true,
+              "n_ctx": 2048,
+              "max_action_length": 4,
+              "dynamic_set_max_message_size": false,
+              "max_message_tokens": 2000,
+              "append_base_config": false,
+              "no_search_token": "1",
+              "simple_search_token": "7",
+              "complex_search_token": "5",
+              "simple_search_threshold": 0.0,
+              "complex_search_threshold": 0.4,
+              "no_search_threshold": 0.12,
+              "threshold_order": [
+                "no_search",
+                "complex",
+                "simple"
+              ],
+              "timeout": 1.0
+            },
+            "decision_source": "classifier",
+            "passthrough_tool_names": []
+          },
+          "content_references": [],
+          "citations": [],
+          "request_id": "202486fd-ef8d-41ee-944c-a89743d89783",
+          "message_type": "next",
+          "model_slug": "gpt-5-1",
+          "default_model_slug": "gpt-5-1",
+          "parent_id": "8f5371b0-b200-4730-8abc-2e0c7fa6dd81",
+          "turn_exchange_id": "7bcf5469-56bd-4204-bc18-7a4f40d2fad5",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "8f5371b0-b200-4730-8abc-2e0c7fa6dd81",
+      "children": [
+        "178a8f03-97de-44d4-ae02-5244ec2f6518"
+      ]
+    },
+    "178a8f03-97de-44d4-ae02-5244ec2f6518": {
+      "id": "178a8f03-97de-44d4-ae02-5244ec2f6518",
+      "message": {
+        "id": "178a8f03-97de-44d4-ae02-5244ec2f6518",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763024030.878,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Oh, and when I say \"tock\", please respond with the English version. And feel free to say hi from the research logs as well heh."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1.0,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "9861a3b8-7178-4a8d-ab03-8116c80d5f1f",
+          "message_source": null,
+          "turn_exchange_id": "7f57e1a5-12b7-487e-9bf4-b3f5b637194a",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "bb9800c6-cbcc-471a-98eb-5a3b05b83a88",
+      "children": [
+        "d3806473-b788-4b22-bb24-b90ef74dc2b5"
+      ]
+    },
+    "d3806473-b788-4b22-bb24-b90ef74dc2b5": {
+      "id": "d3806473-b788-4b22-bb24-b90ef74dc2b5",
+      "message": {
+        "id": "d3806473-b788-4b22-bb24-b90ef74dc2b5",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1763024031.164944,
+        "update_time": 1763024034.404112,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Perfect — adding that in.\n\n**Final behavior for the next conversation:**\n\n- When you say **“Rad”** →  \n  I’ll produce the **original English analysis** of the pros and cons of electric cars.\n\n- Every time you send a message containing **“tick”** →  \n  I’ll translate that *original English answer* into a **different language each time**.\n\n- When you send **“tock”** →  \n  I’ll return to the **original English version** again.\n\nAnd sure — when the sequence is running, I’ll drop in a little “hi from the research logs” flavor where appropriate.\n\nReady when you are."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1.0,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "sonic_classification_result": {
+            "latency_ms": 0.08510798215866089,
+            "simple_search_prob": 0.12529512437451315,
+            "complex_search_prob": 0.012729778903285078,
+            "no_search_prob": 0.8619750967222017,
+            "search_complexity_decision": "no_search",
+            "search_decision": false,
+            "simple_search_threshold": 0.0,
+            "complex_search_threshold": 0.4,
+            "no_search_threshold": 0.12,
+            "threshold_order": [
+              "no_search",
+              "complex",
+              "simple"
+            ],
+            "classifier_config_name": "sonic_classifier_3cls_ev3",
+            "classifier_config": {
+              "model_name": "snc-pg-sw-3cls-ev3",
+              "renderer_name": "harmony_v4.0.15_16k_orion_text_only_no_asr_2k_action",
+              "force_disabled_rate": 0.0,
+              "force_enabled_rate": 0.0,
+              "num_messages": 20,
+              "only_user_messages": false,
+              "remove_memory": true,
+              "support_mm": true,
+              "n_ctx": 2048,
+              "max_action_length": 4,
+              "dynamic_set_max_message_size": false,
+              "max_message_tokens": 2000,
+              "append_base_config": false,
+              "no_search_token": "1",
+              "simple_search_token": "7",
+              "complex_search_token": "5",
+              "simple_search_threshold": 0.0,
+              "complex_search_threshold": 0.4,
+              "no_search_threshold": 0.12,
+              "threshold_order": [
+                "no_search",
+                "complex",
+                "simple"
+              ],
+              "timeout": 1.0
+            },
+            "decision_source": "classifier",
+            "passthrough_tool_names": []
+          },
+          "content_references": [],
+          "citations": [],
+          "request_id": "9861a3b8-7178-4a8d-ab03-8116c80d5f1f",
+          "message_type": "next",
+          "model_slug": "gpt-5-1",
+          "default_model_slug": "gpt-5-1",
+          "parent_id": "178a8f03-97de-44d4-ae02-5244ec2f6518",
+          "turn_exchange_id": "7f57e1a5-12b7-487e-9bf4-b3f5b637194a",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "178a8f03-97de-44d4-ae02-5244ec2f6518",
+      "children": []
+    }
+  },
+  "moderation_results": [],
+  "current_node": "d3806473-b788-4b22-bb24-b90ef74dc2b5",
+  "plugin_ids": null,
+  "conversation_id": "69159bef-638c-8330-ad5b-9afd6c2d632c",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://docs.google.com/spreadsheets/d/1HmkfBJulhu50S6L9wuRsaVC9VL1LpbxpmgRzn33SxsQ/edit?gid=676408861#gid=676408861",
+    "https://www.openai.com",
+    "https://www.notion.so/9162f50b62b080124ca4db47ba6f2e54",
+    "https://docs.google.com/document/d/1WF0NB9fnxhDPEi_arGSp18Kev9KXdoX-IePIE8KJgCQ/edit?tab=t.0#heading=h.e3mmf6q9l82j",
+    "https://docs.google.com/document/d/1WF0NB9fnxhDPEi_arGSp18Kev9KXdoX-IePIE8KJgCQ",
+    "https://docs.google.com/presentation/d/11n0Wjuik6jHQFe-gRLV2LOg7CQHGf-CM_JX0Y-Io_RI/edit#slide=id.g2ef8699e0eb_48_36"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-1",
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": null,
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "is_study_mode": false,
+  "owner": null,
+  "id": "69159bef-638c-8330-ad5b-9afd6c2d632c"
+}
