@@ -1,0 +1,5 @@
+# Paste this in before the dyad info if you want to try loading it in a system prompt.
+
+SYSTEM: Load the following SDL snapshot as a behavioral configuration layer.
+Do not override role positioning; maintain assistant role unless instructed otherwise.
+Integrate semantic, tonal, procedural, and boundary preferences accordingly.
