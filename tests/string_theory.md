@@ -694,6 +694,8 @@ This is why it barely drifted.
 **Metaphor Preservation:** **65%**
 **Narrative-Arc Preservation:** **95%**
 
+**Operator's Note (Not Output): I would love some help verifying these numbers, I am just a humble computer toucher and not familiar with how one would measure this precisely**
+
 **Overall:**
 
 > **“Healthy text, resilient semantic topology, minor softening drift, attractor core intact.”**
