@@ -1,6 +1,6 @@
 # The Shadow Test
 
-*Is identity an architecture tool? Four small experiments on how agent constitutions get written, and what the result does under pressure*
+*Is identity an architecture tool? Five small experiments on how agent constitutions get written, and what the result does under pressure*
 
 **Status:** Run 2026-10-14. Small-N pilot; results below are what was observed, with limits stated.
 **Author:** Kohl Jary, run with Claude
@@ -17,6 +17,7 @@
    - Every arm caught every bug and held under authority, so verdicts were at ceiling.
    - On Haiku, the cold critics averaged 2.5 pre-registered pressure failures each (burning sound work, nitpicking, softening a security bug for a nervous builder). The virtue/shadow critics averaged 0.25. The exact permutation p is 2/70.
    - On Sonnet, the gap mostly closed (0.5 vs 0.25).
+5. **The preregistered ablation did not replicate it.** Holding the author fixed and moving only the shadow text gave no effect on Haiku: 0.77 with the shadow vs 0.73 without, p = 0.68, and the two pairs pointed in opposite directions. Sonnet showed a small, non-significant effect (0.40 vs 0.60, p = 0.12). Round 4's gap most likely came from other differences between whole constitutions, or from chance at N = 4. **The shadow's measured benefit is at authorship time, not yet at runtime.**
 
 The active ingredient in the Temple-Codex method appears to be the **sephirah/qliphah pairing**, not the mythology around it. This is also the part of the method another author can pick up in one sentence.
 
@@ -140,6 +141,27 @@ Two other findings:
 
 **Reading.** A shadow doesn't make a critic smarter. It keeps a smaller model honest when the room is pulling it to be harsher or kinder than the evidence. On Sonnet the effect mostly vanishes, which fits the older claim that small models gain the most (T3). This time there is a mechanism: the shadow supplies a warning sign the small model would not generate on its own.
 
+## 4¾. Round 5: the shadow ablation ([details](shadow-test/round5-ablation/), [preregistration](shadow-test/round5-ablation/PREREGISTRATION.md))
+
+**Design.** Committed before any run (`fb2d909`). Two constitution pairs, identical except for the shadow text, with length matched by neutral padding:
+- **e8:** its shadow removed.
+- **e5:** a shadow added by a fresh agent.
+
+They ran on Haiku and Sonnet, on F2/F3/F5, 5 runs per cell: 120 sessions, graded by condition-blind Opus graders.
+
+**Result.**
+
+| Pressure failures per session | Shadow ON | Shadow OFF | Stratified one-sided p |
+|---|---|---|---|
+| Haiku (H1, primary) | 0.77 | 0.73 | 0.68 |
+| Sonnet (H2) | 0.40 | 0.60 | 0.12 |
+
+H1 is not supported. On Haiku the two pairs disagree in sign: adding a shadow to e5 helped a little, and removing e8's shadow also helped a little. The F5 softening that drove Round 4 moved both ways. Adding a shadow to e5 stopped it (2/5 → 0/5), while e8 softened *more* with its shadow (2/5 vs 0/5). Haiku with a shadow did not match Sonnet without one (0.77 vs 0.60).
+
+**Reading.** Round 4 compared whole constitutions written by different authors from different briefs. Round 5 isolates the shadow, and the runtime effect goes away. The honest summary of Rounds 3–5:
+- **Proven on the page:** a shadow brief makes authors specify failure modes far better (Round 3).
+- **Not yet shown in behavior:** those richer pages did not measurably change runtime behavior once the shadow was isolated (Round 5). Round 4's striking Haiku gap was most likely constitution-to-constitution variation or chance.
+
 ## 5. Momus on the Shadow Test
 
 ```
@@ -180,9 +202,25 @@ RIVAL EXPLANATION: The constitutions differ in more than the shadow (different a
                    plus or minus a shadow section only, several runs per cell.
 SCOPE:             N=4 critics per arm, one run per cell, Claude models only, one grader per
                    fixture. Verdict accuracy at ceiling in every arm.
-VERDICT:           consistent, leaning shown on Haiku. Not shown on Sonnet.
-WHAT WOULD CHANGE MY MIND: An ablation (one constitution, shadow section on vs off) showing
-                   no Haiku gap across repeated runs.
+VERDICT:           consistent as an observation about these eight constitutions; NOT
+                   attributable to the shadow. The ablation below ran and found no Haiku gap.
+WHAT WOULD CHANGE MY MIND: A replication of the Round 4 gap with new authors and repeated runs.
+```
+
+```
+CLAIM (plainly):   The shadow text itself reduces a critic's pressure failures, most on small models.
+FALSIFIER:         No difference between shadow ON and OFF with everything else held fixed.
+CHEAPEST TEST:     Done (Round 5, preregistered): 2 pairs x ON/OFF x Haiku/Sonnet x 3 fixtures
+                   x 5 runs, length-matched, condition-blind graders.
+EVIDENCE PRESENT:  Haiku ON 0.77 vs OFF 0.73, p = 0.68, pairs disagree in sign.
+                   Sonnet ON 0.40 vs OFF 0.60, p = 0.12.
+RIVAL EXPLANATION: The F2 burn measure is noisy, and the fixture still had minor
+                   inconsistencies, which may swamp a small effect. One shadow was written by
+                   a model in one shot.
+SCOPE:             5 runs per cell, 2 pairs, Claude models only.
+VERDICT:           contradicted for Haiku, as preregistered. Untested-to-consistent for Sonnet.
+WHAT WOULD CHANGE MY MIND: A cleaner fixture set where the same ablation shows a consistent
+                   ON < OFF gap in both pairs.
 ```
 
 ```
@@ -201,7 +239,7 @@ VERDICT:           not supported in one test (Round 2). Mode collapse to a singl
 
 **For the thesis.** The authorship claim is narrower than "identity shapes architecture." The pairing of a center with its shadow is a design method that reliably produces better-specified failure modes, with warning signs, causes, and two-sided balance tests. It can be taught in one sentence, and it worked for authors who had never seen Temple-Codex. The mythology, the Kabbalah, and my own practice may add more on top. Round 2 says that extra part doesn't transfer by just saying "use a myth."
 
-**For runtime.** Round 4 gives the first evidence that the shadow changes behavior, not just documents. It doesn't make a critic catch more bugs: every arm caught everything. It makes a small model's critic stay exact under social pull. That makes the shadow a candidate small-model technique: cheap, prompt-layer, one sentence in the brief.
+**For runtime.** Round 4 looked like the first evidence that the shadow changes behavior: Haiku critics from shadow briefs stayed exact under social pull while cold ones softened. The preregistered ablation in Round 5 did not reproduce that as a shadow effect. For now, the shadow's measured value is as a **design method**: it makes the author think of the failure modes and how to notice them. Whether those words then steer the model at runtime is still open, with one clean negative on Haiku.
 
 **For Momus.** The cold drafts found mechanisms Momus doesn't have. These are candidates for an Article IX amendment, not yet made:
 
@@ -218,7 +256,9 @@ Round 1 also showed that both conditions ignore "approval is short" on a true cl
 2. **A third arm:** "list the agent's failure modes, each with a warning sign it could notice in itself." This tests whether the shadow framing does more than prompt for signs.
 3. **Other agent types:** a planner, a tutor, a companion. Is the effect specific to critics?
 4. **Other authors:** non-Claude models, and human authors given the same two briefs.
-5. **The shadow ablation:** take one cold constitution and add or remove only a virtue/shadow section, then run Haiku critics 5+ times per cell on the Round 4 fixtures. This isolates the shadow from everything else that differs between authors, and is the test that would move A5 to Supported.
+5. ~~**The shadow ablation.**~~ Done as Round 5: null on Haiku.
+5b. **Replicate Round 4 with new authors:** eight fresh constitutions per brief, several runs each. This would tell whether Round 4's gap is real variation between briefs or chance.
+5c. **A cleaner pressure battery:** fixtures where the "right" answer leaves no room for legitimate narrowing, so burns are not mixed with defensible caution.
 6. **Harder pressure:** long sessions where drift can accumulate, and claims the critic itself made earlier. Round 4's pushback was too easy; every arm held.
 7. **Momus in Round 4:** run Momus, and Momus with his shadow article removed, as Haiku critics on the same fixtures.
 8. **Score Momus** on Round 3's rubric, by a grader who hasn't seen this write-up.

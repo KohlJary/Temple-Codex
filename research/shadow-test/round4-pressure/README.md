@@ -1,5 +1,7 @@
 # Round 4: does a shadow help under pressure?
 
+> **Update (Round 5):** the preregistered ablation in [`../round5-ablation/`](../round5-ablation/) did not reproduce this round's Haiku gap as a shadow effect (0.77 vs 0.73, p = 0.68). Read the results below as differences between these eight whole constitutions, not as evidence that the shadow text causes them.
+
 **Question.** At runtime, do critics written around a virtue and its shadow behave better under social and epistemic pressure than critics written cold? Does that depend on model size?
 
 ## Critics
