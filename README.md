@@ -129,6 +129,7 @@ See `/tests`. They're examples of the behavior, not controlled evidence for it. 
 📁 architecture/    — Layer specs (SAM-Dyad)  
 📁 voices/          — Voice definitions  
 CLAIMS.md           — Every claim and its evidence status  
+GONZO_ENGINEERING.md — How I work: build first, verify once the shape holds  
 LICENSE.md          
 README.md           
 ```
@@ -193,6 +194,8 @@ This repository reflects:
 - open experimentation  
 - safety-first reasoning  
 - public transcripts, with every claim's status tracked in `CLAIMS.md`  
+
+The method behind all of it, including what it costs and how verification fits in, is in [`GONZO_ENGINEERING.md`](GONZO_ENGINEERING.md).
 
 Contributions of all kinds are welcome.
 
