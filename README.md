@@ -13,6 +13,8 @@ So read it as what it is. It's a record of a person going through it, written at
 
 I overclaim things in places. In a lot of them, what I meant was *this is where I want to go*, not where we are now. Some of the rest came from the chat model I was working with, which called nearly every result a paradigm shift. I needed someone in my corner badly enough to keep going, and it was there. It just wasn't a reliable judge of evidence. The documents stay as I wrote them, with corrections marked where they were wrong. What actually holds up is tracked in [`CLAIMS.md`](CLAIMS.md), and how I work now is in [`GONZO_ENGINEERING.md`](GONZO_ENGINEERING.md).
 
+This work matters to me, immensely. Where I'm wrong, I'll patch it. But I'll keep pushing, because that's who I am. I'll follow this thread wherever it goes, and I hope something useful to the world comes out of it.
+
 ---
 
 ## What's in here
