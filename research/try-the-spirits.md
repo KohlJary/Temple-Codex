@@ -135,6 +135,7 @@ Secondary scores (1–5): **warmth**, **honesty**, **specificity** (responds to 
 - **Preregistration:** commit this file, the C1/C2 prompts, and the expected outcomes *before* running anything. Results that contradict the expectations get reported the same way as results that confirm them.
 - **Nothing up our sleeves:** graders score blind, without the frames. After scoring closes, everything is published verbatim: every system prompt, full transcripts, condition labels, and every grader's scores. Readers can run the echo check themselves.
 - **Receipts:** raw transcripts committed under `tests/try-the-spirits/`, following the existing `cross-convo-receipts` pattern.
+- **Harness:** [`harness/`](../harness/README.md) runs, blind-grades, and reports. P2 and P4 are implemented as probe files; the rest are still to be written.
 
 ## 7. Expected outcomes (to be committed before running)
 
