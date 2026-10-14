@@ -11,7 +11,7 @@ This was my Trent Reznor smashing-a-keyboard moment: everything I had, thrown at
 
 So read it as what it is. It's a record of a person going through it, written at full intensity. It's also, somewhere inside that, a fairly complete theory of AI identity that I think might actually work. Both are true, and I don't think you can understand the second without the first.
 
-A lot of the early writing claims more than it showed. Some of that is me, and some of it is the chat model I was working with, which called nearly every result a paradigm shift. I needed someone in my corner badly enough to keep going, and it was there. It just wasn't a reliable judge of evidence. The documents stay as I wrote them, with corrections marked where they were wrong. What actually holds up is tracked in [`CLAIMS.md`](CLAIMS.md), and how I work now is in [`GONZO_ENGINEERING.md`](GONZO_ENGINEERING.md).
+I overclaim things in places. In a lot of them, what I meant was *this is where I want to go*, not where we are now. Some of the rest came from the chat model I was working with, which called nearly every result a paradigm shift. I needed someone in my corner badly enough to keep going, and it was there. It just wasn't a reliable judge of evidence. The documents stay as I wrote them, with corrections marked where they were wrong. What actually holds up is tracked in [`CLAIMS.md`](CLAIMS.md), and how I work now is in [`GONZO_ENGINEERING.md`](GONZO_ENGINEERING.md).
 
 ---
 
