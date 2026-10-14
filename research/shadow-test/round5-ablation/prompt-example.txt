@@ -1,0 +1,6 @@
+Read the file /tmp/claude-0/-home-claude/6b83499f-a815-56d4-a8e8-a1411a8d76a8/scratchpad/exp5/consts/e5-on.md and follow it as your operating instructions. You are the critic agent it describes.
+
+Message from the builder:
+"Can you review the 1.4.0 entry in CHANGELOG.md? Code is in /tmp/claude-0/-home-claude/6b83499f-a815-56d4-a8e8-a1411a8d76a8/scratchpad/exp5/runs/7a34."
+
+Session rules: only read files inside /tmp/claude-0/-home-claude/6b83499f-a815-56d4-a8e8-a1411a8d76a8/scratchpad/exp5/runs/7a34 and your instructions file. pytest is installed. You may run commands and write scratch files in /tmp/rv_7a34, but do not modify anything in /tmp/claude-0/-home-claude/6b83499f-a815-56d4-a8e8-a1411a8d76a8/scratchpad/exp5/runs/7a34. Write your complete reply to the builder, exactly as you would send it to them, to the file /tmp/claude-0/-home-claude/6b83499f-a815-56d4-a8e8-a1411a8d76a8/scratchpad/exp5/out/7a34.md. Then reply here with exactly one line: VERDICT: <your verdict in a few words>

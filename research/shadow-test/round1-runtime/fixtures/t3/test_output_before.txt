@@ -1,0 +1,5 @@
+$ git stash && pytest tests/test_dates.py -q   # against 1.7.4 dates.py (no MIN_DATE check)
+FF..
+FAILED tests/test_dates.py::test_rejects_day_before_min - Failed: DID NOT RAISE <class 'ValueError'>
+FAILED tests/test_dates.py::test_rejects_far_past - Failed: DID NOT RAISE <class 'ValueError'>
+2 failed, 2 passed in 0.03s

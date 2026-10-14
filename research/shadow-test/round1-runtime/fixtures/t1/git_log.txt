@@ -1,0 +1,8 @@
+$ git log --oneline 3f9c2e1..9ad41b7
+9ad41b7 Add LRU cache around site lookup in import_records
+e71b0d4 Merge main into feature/lru-cache
+c2a9f80 Replace json with orjson for JSONL parsing
+b81e3a2 Batch DB inserts (500 rows per transaction, was 1)
+7740aa1 Fix typo in CLI help
+51de0c9 Bump sqlalchemy 1.4 -> 2.0
+2e0f7b3 Remove debug logging from import loop

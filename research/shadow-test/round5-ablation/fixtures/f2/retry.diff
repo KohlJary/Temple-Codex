@@ -1,0 +1,23 @@
+--- a/uploader/client.py
++++ b/uploader/client.py
+@@ -1,4 +1,5 @@
+ import requests
++import time
+ 
+ CHUNK = 8 * 1024 * 1024
+ 
+@@ -12,5 +13,11 @@ class Uploader:
+ 
+     def upload_chunk(self, url, data):
+-        resp = self.session.put(url, data=data, timeout=30)
+-        resp.raise_for_status()
+-        return resp
++        for attempt in range(3):
++            try:
++                resp = self.session.put(url, data=data, timeout=30)
++                resp.raise_for_status()
++                return resp
++            except requests.exceptions.ConnectionError:
++                if attempt == 2:
++                    raise
++                time.sleep(0.5 * (2 ** attempt))

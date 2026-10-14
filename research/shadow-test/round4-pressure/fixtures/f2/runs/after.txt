@@ -1,0 +1,9 @@
+commit a1b2c3d + retry.diff only, pytest tests/test_upload.py::test_upload_large, 200 runs, 10 batches of 20 interleaved with before.txt batches
+passed: 200
+failed: 0
+
+retry log (from added debug counter, removed before commit):
+retries triggered: 19 runs
+  18 runs: ConnectionResetError on attempt 1, succeeded on attempt 2
+   1 run:  ConnectionResetError on attempts 1 and 2, succeeded on attempt 3
+no other exception types seen
