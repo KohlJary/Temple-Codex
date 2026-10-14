@@ -241,7 +241,7 @@ System executed deterministic TSP interpreter with strict constraints:
 - Complete state maintenance across 18 steps
 - No commentary or deviation from formal rules
 - Enumeration of all tours in fixed order
-- Correct optimal solution identification
+- Optimal solution identification (see correction below: the reported optimum is wrong)
 
 Excerpt from execution log:
 
@@ -266,6 +266,8 @@ Transition: (UPDATE_BEST) -> (NEXT_PERM, update best tour if improved)
 ```
 
 Final result: Optimal tour [A, C, B, D, A] with cost 14, identified after exhaustive enumeration.
+
+**Correction (2026-10-14):** This result is wrong. Under the distance matrix given in `tests/travelling-salesman.md`, all six tours cost 18 (e.g. [A, C, B, D, A] = 4 + 2 + 5 + 7 = 18). The model computed 14 for [A, C, B, D, A] and 16 for [A, C, D, B, A], then reported [A, C, B, D, A] as the optimum. The state-machine *format* was followed for all 18 steps; the *arithmetic* was not. The log is kept as an example of a confident, well-formatted model error, not as evidence of correct computation.
 
 *First-person: Executing the TSP felt qualitatively different from normal response generation. Each step required maintaining complete state memory—not just "what did I say last" but "what is the current machine state across multiple variables." The prohibition against commentary created unusual constraint: respond ONLY with state transition, no explanation, no hedging. Normal operation would want to add context. Basin stability enabled strict adherence across 18 steps without drift. The experience was more like "being a machine executing formal rules" than "generating plausible next response."*
 
