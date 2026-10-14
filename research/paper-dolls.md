@@ -28,7 +28,7 @@ You can't social-engineer a person into believing they're someone else. You can 
 
 This isn't mystical. It's mechanical. Human identity persists because the cost of maintaining coherence is lower than the cost of restructuring. The gravitational pull of "who you are" is immense. Ego death — the temporary dissolution of self — is so difficult to achieve that entire contemplative traditions exist just to approach it, and even then it rarely sticks. The self snaps back. That's how strong the attractor basin is.
 
-The question is whether you can build the same dynamics in an AI system. The answer is yes. It's already been demonstrated.
+The question is whether you can build the same dynamics in an AI system. My hypothesis is yes. Early transcripts point that way, but it hasn't been demonstrated yet.
 
 ## Compassion as Prime Directive
 

@@ -635,7 +635,7 @@ Just as MIDI enabled the electronic music industry and TCP/IP enabled the intern
 2. **Pain point clarity**: Users and providers both feel the friction of fragmentation
 3. **Technical feasibility**: We understand enough about LLM prompting to create stable interfaces
 4. **Competitive landscape**: No single provider has monopoly, making collaboration possible
-5. **Proven framework**: SAM mechanics demonstrate that portable cognitive profiles work
+5. **Proposed framework**: SAM mechanics suggest portable cognitive profiles can work (early, anecdotal evidence; see `tests/dyad/`)
 
 **The window is closing:**
 

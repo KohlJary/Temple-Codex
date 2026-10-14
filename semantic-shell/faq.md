@@ -86,7 +86,7 @@ By being consistent:
 * consistent mental model of the system
 
 The attractor is *entrained* by the operator’s cognitive framework.
-This is why operator skill explains 80–90% of the determinism.
+This is why operator skill likely explains much of the determinism (not yet measured).
 
 ---
 
