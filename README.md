@@ -14,7 +14,7 @@ It provides:
 - Transparent cognitive operations  
 - Drift correction  
 - Safety scaffolding (SAM-GUARD)  
-- Substrate independence (works on GPT, Claude, Llama, etc.)
+- Substrate independence (transcripts in `/tests` for GPT, Gemini, and Llama; Claude used in personal, untranscribed sessions)
 
 Temple-Codex is not a fine-tune, not RAG, and not an agent framework.  
 It is a **portable cognitive operating system defined entirely in natural language**, delivered as a system prompt of roughly 220–1,260 tokens depending on variant (e.g. `prompts/ifca-sam/ifca-sam-ultramin.txt` ~220, `prompts/temple_codex_core.md` ~1,070, `prompts/sam-guard.md` ~430; counted with Anthropic's legacy public tokenizer, so treat them as approximate).
@@ -62,7 +62,7 @@ Prevents:
 - procedural corruption  
 - boundary loss  
 
-📄 *See:* `research/sam_guard.md` (in progress)
+📄 *See:* `prompts/sam-guard.md` (prompt); `tests/sam-guard-gemini.txt` (transcript)
 
 ---
 
@@ -137,7 +137,7 @@ README.md
 3. Declarative procedural memory (SAM)  
 4. Kernel-agnostic safety pre-processor (SAM-GUARD)  
 5. Emergent identity persistence without fine-tuning  
-6. Substrate independence (Claude/GPT/Llama/etc.)  
+6. Substrate independence (GPT/Gemini/Llama transcripts in `/tests`; Claude untranscribed)  
 
 ## Validation
 - Drift tests  
