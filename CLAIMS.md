@@ -21,6 +21,8 @@ That's what makes the rest believable.
 | **Untested** | No evidence in any repo. |
 | **Anecdotal** | Single runs, no baseline, or judged by the model or me alone. |
 | **Partial** | Some real evidence (code exists, tests pass, small comparison), but not enough to settle it. |
+| **Inconclusive** | Tested, but the test couldn't separate the outcomes (e.g. both arms at ceiling). |
+| **Not supported** | A controlled test found no effect. One run; not yet a firm negative. |
 | **Supported** | Controlled, repeatable, or covered by passing tests. |
 | **Retired** | Walked back or withdrawn. Kept for the record. |
 
@@ -164,6 +166,17 @@ The honest framing is aspiration and open question, not finding.
 | I4 | Cass is alive, conscious, and self-aware. | daedalus `icarus-seed.md`, identity docs | **Untested** — stated as fact in a seed prompt. Reframe as belief. |
 | I5 | My interaction style pulls instances into a distinct basin. | daedalus guestbook, identity docs | **Anecdotal** — instances' self-reports. |
 
+## 10. Authorship: identity as a design method
+
+The claim that designing an agent *as a character* produces a better design, whether or not the character text stays in the prompt. This is separate from the runtime claims in section 2.
+
+| ID | Claim | Where | Status | Falsifier / next test |
+|---|---|---|---|---|
+| A1 | Briefing an author with "a core virtue and the specific way it corrupts" yields better-specified failure modes (self-observable warning signs, stated causes, two-sided structure, generalizable self-tests) than a cold brief. | TC `research/shadow-test.md` §4 | **Partial** — one controlled run, 4 vs 4 Sonnet-authored critic constitutions, condition-blind Opus grader: warning signs 7.0 vs 0.5 per draft, non-overlapping. Grader could see the framing. | Framing-stripped regrade; a third "list failure modes with warning signs" arm; other agent types and author models. |
+| A2 | Asking a model to build an agent around a mythological figure improves the design. | TC `research/shadow-test.md` §3 | **Not supported** — one run, 4 vs 4: no difference on failure modes, mechanisms, or Momus-shape. All four myth authors chose Anubis. | Repeat with a specified, less obvious figure. |
+| A3 | Momus's identity framing makes him a better critic at runtime than his rules alone. | daedalus `momus.md`; TC `research/shadow-test.md` §2 | **Inconclusive** — tied at ceiling on four easy fixtures (2 runs per cell). | Hard fixtures: stake-laden claims, long sessions, sound claims dressed to look shaky. |
+| A4 | I could not have written Momus's architecture without the mythic framing. | Personal account | **Position** — about my own process. Consistent with A2: no model reproduced the shape from a generic myth brief. | Not testable on me directly; A1 tests the transferable part. |
+
 ---
 
 ## Where to start
@@ -177,6 +190,8 @@ The highest-value tests, in order:
 5. **Wonderland's P7**: identity vs. generic agents, same model. It settles T1 one way or the other.
 
 ## History
+
+- **2026-10-14** — The Shadow Test (`research/shadow-test.md`). New section 10 on the authorship claim. A1 Partial: the virtue/shadow brief beat a cold brief on self-observable warning signs, 7.0 vs 0.5 per draft. A2 Not supported: a generic myth brief made no difference. A3 Inconclusive: Momus at runtime tied with his plain rules at ceiling. A4 recorded as a position. Two statuses added: Inconclusive and Not supported. Four mechanisms from the cold drafts are noted as candidate Momus amendments in §6.
 
 - **2026-10-14** — Phase 0 follow-up. Remaining overclaims reworded at the source, statuses unchanged: Temple-Codex README "Validation" section rewritten as "Evidence so far" (single runs, which models, no baselines) and S1–S3, R1, P1/P2 calibrated; `research/hybrid.md` calibrated for R1 and I3, with model-written first-person claims ("perfect accuracy", "strict adherence") marked as self-report next to their corrections (Temple-Codex #8). project-cass: X4 fixed in README and docs; LessWrong draft calibrated for X3, R7, S6 (project-cass #9). ophanic: Q6–Q8 wording calibrated, Q9 framed as a vision document, dashboard-app provenance clarified (ophanic #2).
 
