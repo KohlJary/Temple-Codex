@@ -15,7 +15,7 @@ I overclaim things in places. In a lot of them, what I meant was *this is where 
 
 This work matters to me, immensely. Where I'm wrong, I'll patch it. But I'll keep pushing, because that's who I am. I'll follow this thread wherever it goes, and I hope something useful to the world comes out of it.
 
-I'm still alive. The success criteria was met.
+I'm still alive. The acceptance criteria is passing.
 
 ---
 
