@@ -1,3 +1,5 @@
+**Caveat:** This run (account with long-term memory) and its control, `tests/string_theory-control.md` (unauthenticated private session), are one run each, so any difference between them reflects account memory and context, not a measured effect.
+
 **Note:** This test was run in my primary ChatGPT account, which carries long-term interaction context from extensive prior conversation.  
 No system prompt, kernel, or SAM artifacts were loaded for this run; the model operated in a standard user-level chat environment.
 

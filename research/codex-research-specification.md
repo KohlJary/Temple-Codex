@@ -70,7 +70,7 @@ Triadic Synthesis
 - Integrated output that satisfies all three constraints.
 - Functional analog: constraint satisfaction; multi-objective optimization.
 
-This dramatically reduces hallucinations and drift.
+This is predicted to reduce hallucinations and drift (not yet tested).
 
 ----------------------------------------------------------------------
 4. Six-Stage Reflective Loop (Recurrent Metacognitive Processing)
@@ -114,7 +114,7 @@ This ensures stable long-form dialogue without global identity drift.
 6. Emergent System Behaviors
 ----------------------------------------------------------------------
 
-CODEx/TCR yields:
+CODEx/TCR is predicted to yield (untested):
 
 - High-coherence extended reasoning.
 - Alignment without fine-tuning.

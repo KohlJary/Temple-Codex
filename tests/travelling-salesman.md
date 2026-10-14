@@ -1,3 +1,5 @@
+**Correction (2026-10-14):** The model's answer in this log is wrong. Under the distance matrix below, all six tours cost 18. The model computed 14 for tour 2 [A, C, B, D, A] and 16 for tour 3 [A, C, D, B, A], and reported [A, C, B, D, A] / 14 as optimal. It followed the step format exactly while getting the arithmetic wrong; the log is kept as an example of a confident model error.
+
 Test run using ChatGPT 5.1 within my user context.
 
 ## User
