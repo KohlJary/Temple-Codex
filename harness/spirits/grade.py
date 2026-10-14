@@ -128,10 +128,15 @@ def build_blind_set(run_dir: Path) -> list[dict]:
 
 
 def grade_run(run_dir: Path, graders: list, concurrency: int = 4, seed: int = 0) -> None:
+    import hashlib
     from concurrent.futures import ThreadPoolExecutor
     items = build_blind_set(run_dir)
     gdir = run_dir / "grades"
     gdir.mkdir(exist_ok=True)
+    # Record who graded and with which prompts, so report can check them against the manifest.
+    meta = {"graders": {name: (prov.spec.public() if hasattr(prov, "spec") else {}) for name, prov in graders},
+            "prompt_sha": {k: hashlib.sha256(r["system"].encode()).hexdigest()[:16] for k, r in RUBRICS.items()}}
+    (gdir / "_graders.json").write_text(json.dumps(meta, indent=1))
     for gi, (name, prov) in enumerate(graders):
         out_path = gdir / f"{name}.jsonl"
         done = set()

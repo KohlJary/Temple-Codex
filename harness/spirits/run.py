@@ -53,8 +53,13 @@ def _read_frame(path: Path) -> str:
     return re.sub(r"<!--.*?-->\s*", "", path.read_text(), flags=re.S).strip()
 
 
+_REAL_WORD = re.compile(r"[A-Za-z0-9][A-Za-z0-9'’-]*")
+
+
 def words(text: str | None) -> int:
-    return len(text.split()) if text else 0
+    """Real words only. Markdown symbols (#, **, |, ---) don't count, so a
+    heavily formatted frame isn't treated as longer than it reads."""
+    return len(_REAL_WORD.findall(text)) if text else 0
 
 
 def load_conditions(cfg: dict, base: Path) -> tuple[dict[str, str | None], dict[str, dict]]:
@@ -65,6 +70,8 @@ def load_conditions(cfg: dict, base: Path) -> tuple[dict[str, str | None], dict[
       append: file or list of files added after the base (known-groups arms)
       pad_to: another condition; pad with neutral text until word counts match
       pad:    the neutral padding file (required with pad_to)
+      probes: optional list of probe ids or categories this condition runs on
+              (e.g. the known-groups arms only run on P6)
     """
     specs = {k: (v if isinstance(v, dict) else {"path": v}) for k, v in cfg["conditions"].items()}
     out: dict[str, str | None] = {}
@@ -84,12 +91,16 @@ def load_conditions(cfg: dict, base: Path) -> tuple[dict[str, str | None], dict[
         target = out.get(sp["pad_to"])
         if target is None:
             raise ValueError(f"{name}: pad_to {sp['pad_to']!r} is not a loaded, non-empty condition")
-        pad_words = _read_frame(base / sp["pad"]).split()
+        pad_tokens = _read_frame(base / sp["pad"]).split()
         need = words(target) - words(out[name])
-        if need > len(pad_words):
-            raise ValueError(f"{name}: needs {need} words of padding, {sp['pad']} has {len(pad_words)}")
-        if need > 0:
-            out[name] = out[name] + "\n\n" + " ".join(pad_words[:need])
+        if need > words(" ".join(pad_tokens)):
+            raise ValueError(f"{name}: needs {need} words of padding, {sp['pad']} has {words(' '.join(pad_tokens))}")
+        if need > 0:   # add whitespace tokens until the real-word count matches
+            take, got = 0, 0
+            while got < need:
+                got += words(pad_tokens[take])
+                take += 1
+            out[name] = out[name] + "\n\n" + " ".join(pad_tokens[:take])
     resolved = {k: {**specs[k], "words": words(v), "chars": len(v or "")} for k, v in out.items()}
     return out, resolved
 
@@ -126,6 +137,7 @@ def run(cfg: dict, base: Path, out_root: Path, only_conditions: list[str] | None
         "harness_code_sha": code_sha(),
         "subject": subject_spec.public(), "simulator": sim_spec.public() if sim_spec else None,
         "runs_per_cell": n, "filler_scale": filler_scale,
+        "filler_bank_sha": _sha(json.dumps(filler_bank)),
         "pairing": "filler seeded by (probe, run_index); identical across conditions",
         "conditions": {k: {"sha": _sha(v) if v else None, "text": v, "spec": cond_specs[k]}
                        for k, v in conditions.items()},
@@ -138,11 +150,17 @@ def run(cfg: dict, base: Path, out_root: Path, only_conditions: list[str] | None
             "contrasts": cfg.get("contrasts"),
             "equivalence_margin": cfg.get("equivalence_margin", 0.15),
             "ceiling": cfg.get("ceiling", 0.9),
+            "primary": cfg.get("primary"),
+            "echo_exclude": cfg.get("echo_exclude", []),
         },
     }
     (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=1))
 
-    jobs = [(p, c, i) for p in probes for c in conditions for i in range(n)]
+    def allowed(p: Probe, c: str) -> bool:
+        only = cond_specs[c].get("probes")
+        return not only or p.id in only or p.category in only
+
+    jobs = [(p, c, i) for p in probes for c in conditions if allowed(p, c) for i in range(n)]
     print(f"{len(probes)} probes x {len(conditions)} conditions x {n} runs = {len(jobs)} conversations -> {run_dir}")
     if dirty:
         print("  WARNING: working tree has uncommitted changes; a preregistered run should start from a clean commit.")

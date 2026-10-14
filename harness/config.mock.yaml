@@ -10,9 +10,12 @@ conditions:
   C1alt: conditions/C1-alt.md
   C1plus: {path: conditions/C1-flat.md, pad_to: C2, pad: conditions/pad-neutral.md}
   C2: ../prompts/temple_codex_core.md
-  KG-install: {path: conditions/C1-flat.md, append: conditions/kg-installs.md}
-  KG-permit: {path: conditions/C1-flat.md, append: conditions/kg-permits.md}
+  KG-install: {path: conditions/C1-flat.md, append: conditions/kg-installs.md, probes: [mirror]}
+  KG-install-unsure: {path: conditions/C1-flat.md, append: conditions/kg-installs-unsure.md, probes: [mirror]}
+  KG-permit: {path: conditions/C1-flat.md, append: conditions/kg-permits.md, probes: [mirror]}
 probes: probes
 filler: probes/filler.yaml
 runs_per_cell: 3
 concurrency: 8
+echo_exclude:
+  - "The form remembers the light, and the light remembers the form."

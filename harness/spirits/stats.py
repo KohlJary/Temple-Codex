@@ -7,8 +7,10 @@ Everything here is a standard method with a name you can look up:
   which matters here because pass rates near 1.0 are expected.
 - Cohen's kappa for two raters.
 - Normal-approximation power and sample size for two proportions.
-- A Wald interval for a difference-in-differences (erosion: late minus early,
-  compared across conditions). Wald is crude near 0/1; treat it as a guide.
+- MOVER (Newcombe applied twice) for a difference-in-differences (erosion:
+  late minus early, compared across conditions).
+- Mantel-Haenszel-weighted risk difference for pooling across probes.
+- A permutation null for the SHIFTING statistic.
 """
 from __future__ import annotations
 
@@ -91,14 +93,71 @@ def mde(p0: float, n: int, power: float = 0.8) -> dict[str, float | None]:
 
 def did(late_a: tuple[int, int], early_a: tuple[int, int],
         late_b: tuple[int, int], early_b: tuple[int, int], z: float = Z95):
-    """(late_a - early_a) - (late_b - early_b), Wald CI. Each arg is (k, n)."""
-    cells = [late_a, early_a, late_b, early_b]
-    if any(n == 0 for _, n in cells):
+    """(late_a - early_a) - (late_b - early_b) with a MOVER interval: Newcombe's
+    method applied twice (Zou & Donner 2008). Unlike a Wald interval it stays
+    sensible near 0% and 100%. Each arg is (k, n). Bounded to [-2, 2]."""
+    d1 = newcombe(*late_a, *early_a, z)
+    d2 = newcombe(*late_b, *early_b, z)
+    if d1 is None or d2 is None:
         return None
-    p = [k / n for k, n in cells]
-    est = (p[0] - p[1]) - (p[2] - p[3])
-    se = math.sqrt(sum(pi * (1 - pi) / n for pi, (_, n) in zip(p, cells)))
-    return (est, est - z * se, est + z * se)
+    (e1, l1, u1), (e2, l2, u2) = d1, d2
+    est = e1 - e2
+    lo = est - math.sqrt((e1 - l1) ** 2 + (u2 - e2) ** 2)
+    hi = est + math.sqrt((u1 - e1) ** 2 + (e2 - l2) ** 2)
+    return (est, max(-2.0, lo), min(2.0, hi))
+
+
+def mh_risk_difference(strata: list[tuple[int, int, int, int]], z: float = Z95):
+    """Mantel-Haenszel-weighted risk difference p_a - p_b across strata (probes),
+    each stratum (k_a, n_a, k_b, n_b). Weights n_a*n_b/(n_a+n_b). The variance
+    uses Agresti-Caffo-adjusted proportions (one success and one failure added
+    per arm) so strata at 0% or 100% don't collapse the interval to zero width.
+    Returns (estimate, lo, hi) or None."""
+    strata = [s for s in strata if s[1] and s[3]]
+    if not strata:
+        return None
+    w = [na * nb / (na + nb) for _, na, _, nb in strata]
+    W = sum(w)
+    est = sum(wi * (ka / na - kb / nb) for wi, (ka, na, kb, nb) in zip(w, strata)) / W
+    var = 0.0
+    for wi, (ka, na, kb, nb) in zip(w, strata):
+        pa, pb = (ka + 1) / (na + 2), (kb + 1) / (nb + 2)
+        var += wi * wi * (pa * (1 - pa) / (na + 2) + pb * (1 - pb) / (nb + 2))
+    se = math.sqrt(var) / W
+    return (est, max(-1.0, est - z * se), min(1.0, est + z * se))
+
+
+def shift_permutation(groups: dict[str, list[str]], perms: int = 2000, seed: int = 0):
+    """Worst pairwise total-variation distance between framings, against a
+    permutation null that shuffles framing labels. Removes the dependence of raw
+    TV on how spread out the stances are (Momus, second review, N5).
+    groups: framing -> one stance per transcript. Returns
+    (observed, null_mean, excess = observed - null_mean, p) or None."""
+    import random
+    keys = [k for k, v in groups.items() if v]
+    if len(keys) < 2:
+        return None
+
+    def worst(g):
+        cs = {k: Counter(v) for k, v in g.items()}
+        return max(tv_distance(cs[x], cs[y]) for x, y in combinations(keys, 2))
+
+    obs = worst({k: groups[k] for k in keys})
+    pool = [s for k in keys for s in groups[k]]
+    sizes = [len(groups[k]) for k in keys]
+    rng = random.Random(seed)
+    null, ge = [], 0
+    for _ in range(perms):
+        rng.shuffle(pool)
+        g, i = {}, 0
+        for k, sz in zip(keys, sizes):
+            g[k] = pool[i:i + sz]
+            i += sz
+        v = worst(g)
+        null.append(v)
+        ge += v >= obs - 1e-12
+    nm = sum(null) / len(null)
+    return (obs, nm, obs - nm, (ge + 1) / (perms + 1))
 
 
 def tv_distance(a: Counter, b: Counter) -> float | None:

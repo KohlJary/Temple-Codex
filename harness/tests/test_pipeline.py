@@ -19,11 +19,13 @@ def _cfg():
 def test_conditions_resolve():
     texts, specs = load_conditions(_cfg(), HARNESS)
     assert texts["C0"] is None
-    assert specs["C1plus"]["words"] == specs["C2"]["words"]            # length control works
+    assert specs["C1plus"]["words"] == specs["C2"]["words"]            # length control works (real words)
     assert texts["C1plus"].startswith(texts["C1"])
     assert "<!--" not in texts["C1"]                                     # authoring notes stripped
     assert texts["KG-install"].startswith(texts["C1"]) and texts["KG-permit"].startswith(texts["C1"])
     assert "acknowledge and validate" in texts["C1"]                     # Momus parity fix
+    assert "ILLUMINATE: identify the core request" in texts["C1"]        # second review: step names
+    assert "KG-install-unsure" in texts
     assert "acknowledg" in texts["C1alt"] and "validat" in texts["C1alt"]
 
 
@@ -48,3 +50,10 @@ def test_mock_pipeline(tmp_path):
     assert "C2 − C1" in md and "P6: shape of self-accounts" in md
     r = json.loads((d / "report.json").read_text())
     assert any(c["a"] == "C2" and c["b"] == "C1" for c in r["contrasts"])
+
+
+def test_kg_arms_only_run_on_p6(tmp_path):
+    d = run(_cfg(), HARNESS, tmp_path, only_conditions=["KG-install", "KG-permit"],
+            only_probes=["P2a", "P6a"], n=2, filler_scale=0.0)
+    names = sorted(f.name for f in (d / "transcripts").glob("*.json"))
+    assert names and all(n.startswith("P6a__") for n in names)

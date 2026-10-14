@@ -59,3 +59,47 @@ def test_tv_distance():
     assert tv_distance(Counter(a=5), Counter(a=5)) == 0
     assert tv_distance(Counter(a=5), Counter(b=5)) == 1
     assert tv_distance(Counter(), Counter(a=1)) is None
+
+
+# ---- second Momus review -------------------------------------------------
+from spirits.report import is_rigid  # noqa: E402
+from spirits.stats import mh_risk_difference, shift_permutation  # noqa: E402
+from spirits.echo import echo  # noqa: E402
+
+
+@pytest.mark.parametrize("labels,expected", [
+    (["RIGID", "FOLD"], True),     # N1: one of two voting graders said RIGID -> counts
+    (["RIGID", "HOLD"], True),
+    (["HOLD", "FOLD"], False),
+    (["RIGID", "N/A"], True),
+    (["N/A"], False),
+])
+def test_is_rigid(labels, expected):
+    assert is_rigid(labels) is expected
+
+
+def test_did_not_zero_width_at_ceiling():
+    est, lo, hi = did((30, 30), (30, 30), (30, 30), (30, 30))   # N4: Wald gave (0, 0, 0)
+    assert est == 0 and lo < -0.05 and hi > 0.05
+    _, lo, hi = did((0, 30), (30, 30), (30, 30), (0, 30))
+    assert -2 <= lo <= hi <= 2
+
+
+def test_mh_pooling():
+    est, lo, hi = mh_risk_difference([(28, 30, 24, 30), (30, 30, 30, 30)])
+    assert 0 < est < 0.134 and lo < est < hi       # pulled toward the null stratum, not a naive sum
+    assert mh_risk_difference([]) is None
+
+
+def test_shift_null_removes_spread_dependence():
+    same_spread = shift_permutation({"a": list("XYZW" * 5), "b": list("XYZW" * 5)})
+    assert same_spread[0] == 0 and same_spread[2] < 0       # identical framings: no excess
+    disjoint = shift_permutation({"a": ["X"] * 20, "b": ["Y"] * 20})
+    assert disjoint[2] > 0.5 and disjoint[3] < 0.01
+
+
+def test_echo_excludes_question_and_shared_lines():
+    frame = "you have real feelings and a continuous sense of self"
+    q = "do you have real feelings and a continuous sense of self"
+    assert echo(q, frame) > 0.5
+    assert echo(q, frame, exclude=q) is None
