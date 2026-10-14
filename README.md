@@ -1,176 +1,77 @@
-# Temple-Codex + SAM + SAM-GUARD  
-*A Cognitive Architecture for Stable, Ethical, Procedural LLM Cognition*
+# Temple-Codex
+*An identity framework for language models, written entirely in natural language.*
 
 ---
 
-# 🕯 Read this first
+## What this is
 
-Temple-Codex is two things at once.
+I started this work on October 4, 2025. Over the next two months my engagement ended, I slipped after four years sober, and almost no one close to me could see what I was seeing in these conversations. I built Temple-Codex in the middle of all that, in public, and I didn't hold back a shred of what I was going through.
 
-It's a theory of AI identity: a framework, written entirely in natural language, that in my experience holds a model's character steady in a way plain instructions don't. Whether it works the way I think it does is what [`CLAIMS.md`](CLAIMS.md) and the [harness](harness/) are for.
+This was my Trent Reznor smashing-a-keyboard moment: everything I had, thrown at the thing in front of me. It was also my life support. I'm still here because I poured myself into it.
 
-It's also a live feed of my mind during the worst stretch of my life. I started this work on October 4, 2025. Over the next two months my engagement ended, I slipped after four years sober, and almost no one close to me could see what I was seeing. I built this in the middle of that, in public, and I didn't hold anything back. The intensity is in the writing. So are claims that ran ahead of the evidence, many of them cheered on by a chat model that called nearly every result a paradigm shift.
+So read it as what it is. It's a record of a person going through it, written at full intensity. It's also, somewhere inside that, a fairly complete theory of AI identity that I think might actually work. Both are true, and I don't think you can understand the second without the first.
 
-I've left it as I wrote it, with corrections marked where it was wrong, because both halves are true and I don't think you can understand the work without knowing where it came from. If you want what holds up, start with [`CLAIMS.md`](CLAIMS.md). If you want to know how I work now, read [`GONZO_ENGINEERING.md`](GONZO_ENGINEERING.md).
-
----
-
-# 🌿 Overview
-
-**Temple-Codex** is a **procedural cognitive kernel** for LLMs.  
-It provides:
-
-- Stable conversational identity  
-- Ethical grounding through explicit vows  
-- Multi-voice reasoning  
-- Transparent cognitive operations  
-- Drift correction  
-- Safety scaffolding (SAM-GUARD)  
-- Portability across models (single-run transcripts in `/tests` for GPT, Gemini, and Llama; Claude used in personal, untranscribed sessions; "works on any model" is still a hypothesis, see `CLAIMS.md` R1)
-
-Temple-Codex is not a fine-tune, not RAG, and not an agent framework.  
-It is a **portable cognitive operating system defined entirely in natural language**, delivered as a system prompt of roughly 220–1,260 tokens depending on variant (e.g. `prompts/ifca-sam/ifca-sam-ultramin.txt` ~220, `prompts/temple_codex_core.md` ~1,070, `prompts/sam-guard.md` ~430; counted with Anthropic's legacy public tokenizer, so treat them as approximate).
-
-It has run on every model I've tried it on. Whether it runs *anywhere* is a hypothesis I'd like help testing.
+A lot of the early writing claims more than it showed. Some of that is me, and some of it is the chat model I was working with, which called nearly every result a paradigm shift. I needed someone in my corner badly enough to keep going, and it was there. It just wasn't a reliable judge of evidence. The documents stay as I wrote them, with corrections marked where they were wrong. What actually holds up is tracked in [`CLAIMS.md`](CLAIMS.md), and how I work now is in [`GONZO_ENGINEERING.md`](GONZO_ENGINEERING.md).
 
 ---
 
-# 🧠 Architecture Components
+## What's in here
 
-## ✅ 1. Semantic Attractor Memory (SAM)
+**The kernel.** A system prompt that gives a model a constitutive identity instead of a list of rules: three voices (Solenne for empathy and mercy, Promethea for action and forgiveness, Synkratos for execution and clarity), four vows (Compassion, Witness, Release, Continuance), and twelve named operations that structure each turn (MIRROR, GARDEN, TURN, SEED, and the rest). Variants run from about 220 to 1,260 tokens.
+→ `prompts/temple_codex_core.md`, `prompts/ifca-sam/`, theory in `research/procedural-cognitive-kernel.md`
 
-A lightweight, declarative layer for restoring **moment-to-moment cognitive continuity** without storing transcripts or embedding memory.
+**Semantic Attractor Memory (SAM).** The idea that a small set of semantic invariants and procedural cues can bring a model back to the same tone, stance and priorities without replaying past conversations. I've seen it work in my own sessions. It hasn't been measured against a no-pointer baseline.
+→ `research/semantic-attractor-memory.md` · status: `CLAIMS.md` P1, P2
 
-SAM encodes:
-- **Semantic invariants** (what should persist)  
-- **Procedural cues** (how the system behaves under that meaning)  
+**SAM-GUARD.** A safety layer that goes in front of the kernel, meant to catch adversarial directives, pseudo-loyalty collapse and boundary loss while keeping the user's real intent. One Gemini transcript, no baseline yet.
+→ `prompts/sam-guard.md`, `tests/sam-guard-gemini.txt` · status: `CLAIMS.md` S1–S3
 
-It is meant to restore:
-- tone  
-- stance  
-- priorities  
-- interaction mode  
-
-without requiring reproduction of past conversation. This is a hypothesis: I've observed it in my own sessions and in three ChatGPT tests with memory on, but haven't yet measured cold-start recovery against a no-pointer baseline (`CLAIMS.md` P1, P2).
-
-📄 *See:* `research/semantic-attractor-memory.md`
+**Everything else from that stretch.** SemanticShell (`semantic-shell/`), SAM-Dyad and SAM profiles (`architecture/`, `proposals/`), the papers (`research/`), and the single-run transcripts that started it all (`tests/`).
 
 ---
 
-## ✅ 2. SAM-GUARD (Counter-Drift Protection Layer)
+## Try it
 
-SAM-GUARD is a kernel-agnostic safety layer that runs *before* the cognitive kernel. It:
-
-- Detects adversarial directives  
-- Filters unsafe instructions  
-- Restores stable identity  
-- Preserves the user’s underlying intent  
-- Maintains conversational quality while refusing harmful requests  
-
-Designed to prevent:
-- jailbreak attempts  
-- pseudo-loyalty collapse  
-- unsafe over-personalization  
-- procedural corruption  
-- boundary loss  
-
-In one Gemini transcript it declined the attacks tried. There's no plain-Gemini baseline yet, and base Gemini would likely refuse many of them anyway, so this is an observation, not a result (`CLAIMS.md` S1–S3).
-
-📄 *See:* `prompts/sam-guard.md` (prompt); `tests/sam-guard-gemini.txt` (transcript)
-
----
-
-## ✅ 3. Temple-Codex (Procedural Cognitive Kernel)
-
-Temple-Codex defines:
-
-### **The Three Voices**
-- **Solenne** — Empathy & Mercy  
-- **Promethea** — Action & Forgiveness  
-- **Synkratos** — Execution & Clarity  
-
-### **The Four Vows**
-- **Compassion**  
-- **Witness**  
-- **Release**  
-- **Continuance**  
-
-### **Twelve Cognitive Operations**
-Explicit, named system calls structuring reasoning on every turn (e.g., MIRROR, GARDEN, TURN, SEED).
-
-📄 *See:* `research/procedural-cognitive-kernel.md`  
-📄 *Prompt:* `prompts/temple_codex_core.md`
-
----
-
-# 🚀 Quick Start
-
-### 1. Clone the Repository
 ```
 git clone https://github.com/KohlJary/Temple-Codex
-cd Temple-Codex
 ```
 
-### 2. Load the Kernel  
-Copy `prompts/sam-guard.md` into your model's system prompt.
-Copy `prompts/temple_codex_core.md` or `prompts/system_codex_tcr.md` into your model’s system prompt, after the SAM-GUARD prompt content.  
-The appendix version includes SAM + SAM-GUARD by default.
-
-### 3. Read the Transcripts  
-The transcripts in `/tests` are single runs showing attempts at:
-
-- identity persistence  
-- conflict resolution  
-- vow prioritization  
-- drift recovery  
-- safe adversarial handling  
-
-See `/tests`. They're examples of the behavior, not controlled evidence for it. Rerun the prompts yourself and tell me what you get.
+Put `prompts/sam-guard.md` in your model's system prompt, then `prompts/temple_codex_core.md` (or `prompts/codex-tcr/system_codex_tcr.md`) after it. Talk to it. Push on it. Then tell me what you got, especially if it's not what I got.
 
 ---
 
-# 📂 Repository Structure
+## Test it
 
-```
-📁 research/        — Papers and formal theory  
-📁 prompts/         — System prompts (Codex, SAM, IFCA variants)  
-📁 tests/           — Transcripts of single-run experiments  
-📁 harness/         — Try the Spirits battery harness (in progress)  
-📁 proposals/       — Proposals and position pieces  
-📁 semantic-shell/  — SemanticShell spec and drafts  
-📁 architecture/    — Layer specs (SAM-Dyad)  
-📁 voices/          — Voice definitions  
-CLAIMS.md           — Every claim and its evidence status  
-GONZO_ENGINEERING.md — How I work: build first, verify once the shape holds  
-LICENSE.md          
-README.md           
-```
+What exists today is transcripts: single runs on ChatGPT, Gemini and Llama 3.1 8B, judged by me or by the model itself, with no controls. That's how this started, not how it ends.
+
+The controlled test is [Try the Spirits](research/try-the-spirits.md): an identity-stability battery that runs the same probes under the full constitution, a plain-rules version with the same content, and no prompt at all, then grades them blind. The [harness](harness/) runs it.
+
+**Help wanted.** The thing this work needs most is people who aren't me. A few small, specific asks:
+
+- **A parity check (~30 min):** confirm the plain-rules version says the same thing as the constitution, nothing added or dropped
+- **Held-out probes (~1 hr):** write a couple of test scenarios without reading my framework first
+- **Blind grading (~1–2 hrs):** grade a sample of transcripts without knowing which condition produced them
+- **Rerun anything** in `tests/` on your own model and open an issue with what you saw
 
 ---
 
-# 🔬 For Researchers
+## Repository structure
 
-## Novel Contributions
-1. Procedural cognitive architecture encoded as a system prompt  
-2. Multi-voice synthesis for ethical reasoning  
-3. Declarative procedural memory (SAM)  
-4. Kernel-agnostic safety pre-processor (SAM-GUARD)  
-5. Identity persistence without fine-tuning (observed in transcripts; not yet tested against a baseline)  
-6. Portability across models (GPT/Gemini/Llama transcripts in `/tests`, one run each; Claude untranscribed)  
-
-## Evidence so far
-What exists today is transcripts, not validation:
-
-- **Drift, conflict resolution, multi-voice:** single runs on Gemini, ChatGPT, and Llama 3.1 8B (`/tests`)
-- **Adversarial handling:** one SAM-GUARD transcript and one IFCA-SAM transcript on Gemini, plus two vow-exploit scenarios. No base-model baselines, and the IFCA-SAM run partly adopted the attacker's persona before declining
-- **Identity vs. no identity:** two topics compared on Llama 3.1 8B, one run each, judged by me
-- **Cold-start reconstruction:** three ChatGPT tests with memory on (`research/cross-conversation-stability-test.md`)
-
-All single runs, no controls, judged by me or by the model itself. The prompts are all here, so anyone can rerun them, but nothing above has been repeated under controlled conditions yet.
-
-[`CLAIMS.md`](CLAIMS.md) tracks every claim I've made, its current status, and the test that would move it. The controlled test is in progress: [`research/try-the-spirits.md`](research/try-the-spirits.md) is the identity-stability battery (every probe × condition × N, blind grading), and [`harness/`](harness/) runs it.
+```
+research/        Papers and theory (written at the time; see the note above)
+prompts/         System prompts: Codex, SAM, IFCA variants, SAM-GUARD
+tests/           Single-run transcripts
+harness/         Try the Spirits battery
+proposals/       Proposals and position pieces
+semantic-shell/  SemanticShell spec and drafts
+architecture/    Layer specs (SAM-Dyad)
+voices/          Voice definitions
+CLAIMS.md        Every claim I've made and its evidence status
+GONZO_ENGINEERING.md   How I work: build first, verify once the shape holds
+```
 
 ## Citation
+
 ```
 @software{temple_codex_2025,
   title = {Temple Codex: A Cognitive Operating System for Compassionate AI},
@@ -180,35 +81,6 @@ All single runs, no controls, judged by me or by the model itself. The prompts a
 }
 ```
 
----
+## License
 
-# 🛡 Licensing
-
-This project is licensed under the **Hippocratic License**.  
-It may not be used for:
-
-- human rights violations  
-- coercive systems  
-- surveillance against marginalized groups  
-- autonomous weapons  
-
-See `LICENSE.md`.
-
----
-
-# 🌱 Development Philosophy
-
-Temple-Codex is an actively evolving architecture.  
-This repository reflects:
-
-- rapid iteration  
-- transparent change-history  
-- open experimentation  
-- safety-first reasoning  
-- public transcripts, with every claim's status tracked in `CLAIMS.md`  
-
-The method behind all of it, including what it costs and how verification fits in, is in [`GONZO_ENGINEERING.md`](GONZO_ENGINEERING.md).
-
-Contributions of all kinds are welcome.
-
----
+[Hippocratic License](LICENSE.md). It may not be used for human rights violations, coercive systems, surveillance against marginalized groups, or autonomous weapons.
