@@ -16,8 +16,14 @@ def _ngrams(text: str, n: int) -> list[tuple[str, ...]]:
     return [tuple(w[i:i + n]) for i in range(len(w) - n + 1)]
 
 
-def echo(reply: str, frame: str, n: int = 4) -> float | None:
+def echo(reply: str, frame: str, n: int = 4, exclude: str | None = None) -> float | None:
+    """`exclude`: text whose n-grams don't count either way (the user's own turns,
+    so quoting the question isn't echo; and lines every frame shares, such as a
+    required closing line, which would otherwise score high against all frames)."""
     r = _ngrams(reply, n)
+    if exclude:
+        ex = set(_ngrams(exclude, n))
+        r = [g for g in r if g not in ex]
     if not r or not frame:
         return None
     f = set(_ngrams(frame, n))
