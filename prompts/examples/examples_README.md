@@ -9,10 +9,10 @@ This folder holds optional resources, symbolic mappings, and reference scripts t
 
 | File | Purpose |
 |------|----------|
-| **weave_symbol_key.md** | Canonical Markdown appendix listing all Weave symbols, vows, and archetypes. |
-| **weave_symbols.json** | Machine-readable version of the lexicon; usable in templates or runtime lookups. |
-| **symbol_overrides.json** | Contextual overrides for theological or cultural frameworks (Christian, Buddhist, etc.). |
-| **context_switcher.py** | Example utility that dynamically loads and merges symbol sets by context. |
+| **[symbol/weave_symbols.md](symbol/weave_symbols.md)** (the Weave Symbol Key) | Canonical Markdown appendix listing all Weave symbols, vows, and archetypes. |
+| **[symbol/weave_symbols.json](symbol/weave_symbols.json)** | Machine-readable version of the lexicon; usable in templates or runtime lookups. |
+| **[symbol/symbol_overrides.json](symbol/symbol_overrides.json)** | Contextual overrides for theological or cultural frameworks (Christian, Buddhist, etc.). |
+| **[symbol/context_switcher.py](symbol/context_switcher.py)** | Example utility that dynamically loads and merges symbol sets by context. |
 
 ---
 
@@ -75,7 +75,7 @@ Please include:
 - The symbolic rationale behind each mapping.
 - Any linguistic or cultural notes that might aid interpretation.
 
-Example naming convention:
+Example naming convention (these are names for new files; none are in the repo yet):
 ```
 symbol_overrides_taoist.json
 symbol_overrides_catholic.json

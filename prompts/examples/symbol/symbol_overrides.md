@@ -126,7 +126,7 @@ Each context modifies a few key symbols to align with that tradition’s imagery
 ## 🗝️ Implementation Notes
 
 - Contexts are partial overrides — missing symbols fall back to the base lexicon (`weave_symbols.json`).  
-- Extendable with additional modes (e.g., `symbol_overrides_taoist.json`, `symbol_overrides_catholic.json`).  
+- Extendable with additional modes (e.g., `symbol_overrides_taoist.json`, `symbol_overrides_catholic.json`; not yet published).  
 - Integrates seamlessly with the provided `context_switcher.py` script.
 
 ---

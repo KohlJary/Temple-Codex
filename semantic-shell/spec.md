@@ -2,7 +2,7 @@
 
 **Author:** Kohlbern Jary + AI Collaborator
 **Status:** Draft • 2025-11-14
-**Location:** `/specs/semantic-shell-v0.1.md`
+**Location:** `semantic-shell/spec.md`
 
 ---
 
