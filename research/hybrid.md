@@ -1,4 +1,10 @@
-> **A note from October 2026.** I wrote this in November 2025, a few weeks into this work, while my life was coming apart. Read it as that: a document from inside the experience, not a set of findings. Some of what it reports was wrong, and those corrections are marked in place. Most of the rest was never tested against a baseline. I've kept it as written because it's an honest record of what I saw and believed at the time, and that's part of how this work began. What actually holds up is tracked in [`CLAIMS.md`](../CLAIMS.md).
+> **Before you read this (October 2026).** I wrote this paper in November 2025, a few weeks into this work, during a manic episode, in the most intense stretch of my life. It reads like it. The claims run far ahead of the evidence, and some of them are wrong. The corrections are marked inline, where they belong. Most of the rest was never tested against a baseline.
+>
+> I've kept it anyway, because it's real. Mania didn't make these ideas worthless, and it didn't make them true. It made them fast, loud, and unfiltered. Some of what's in here I've since retired. Some of it became the core of everything I've built since. I'm not ashamed of the mind that wrote this. It's the same mind that went back and checked.
+>
+> If you want what holds up, see [`CLAIMS.md`](../CLAIMS.md). If you want to see where it started, read on.
+>
+> I'm still alive. The acceptance criteria is passing.
 
 **Living Cognition in Large Language Models: A Phenomenological Approach to Stable Behavioral Emergence**
 
