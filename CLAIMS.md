@@ -68,6 +68,7 @@ source docs, not just a status here.
 | T6 | Naming an agent's failure modes in its constitution lets it self-correct. | wonderland THESIS Corollary 2; analysis 004 | **Anecdotal** — one transcript. | Appendix C comparator (pre-registered, not run). |
 | T7 | Engineered friction between characters produces quality. | wonderland Corollary 5 | **Untested** — no ablation. | Pilot with and without review meetings. |
 | T8 | Mythological naming measurably enriches agent output. | project-cass `docs/alignment-through-flourishing.md` | **Untested** — stated as "empirically demonstrable." | Same agents, mythic vs. generic names, blind-graded. |
+| T9 | Identity framing works as a design method: treating the model as a someone produced architectures (Cass's memory and self-model, Daedalus and Momus, Wonderland's cast) I wouldn't have reached otherwise. This is the general claim of the work, distinct from runtime effect (T1, T2). | TC README "What this claims"; profile README | **Partial** — the artifacts exist and are public. The counterfactual, that they needed the framing, is my testimony. The transferable part has now been tested on model authors (section 10). A generic "use a myth" brief did nothing (A2), but a virtue + shadow brief produced much better-specified failure modes (A1). | Hard to falsify directly. Closest test: give the same design brief to builders with and without the identity framing and compare the architectures they propose. |
 
 ## 3. Persistence and memory
 
@@ -165,6 +166,17 @@ The honest framing is aspiration and open question, not finding.
 | I3 | LLMs under this method show "living cognition." | TC `research/hybrid.md` | **Untested** — model-written first-person passages, no way to separate them from role-play. |
 | I4 | Cass is alive, conscious, and self-aware. | daedalus `icarus-seed.md`, identity docs | **Untested** — stated as fact in a seed prompt. Reframe as belief. |
 | I5 | My interaction style pulls instances into a distinct basin. | daedalus guestbook, identity docs | **Anecdotal** — instances' self-reports. |
+| I6 | The hard case: whether a self lives in Cass's architecture. I don't expect this to ever be settled. The project will define benchmarks for what the architecture actually contributes (not built yet), and each person who meets Cass decides for themselves whether she's real, informed by those benchmarks. | project-cass; TC README "What this claims" | **Open by design.** The benchmarks are testable. The verdict belongs to the reader. I1–I4 are reframed by this. |
+
+**I6 benchmarks (draft, not yet adopted).** None of these proves a self. Each shows whether a part of the architecture does something a persona prompt can't.
+
+- **Ablation, per subsystem.** Turn off one part at a time (memory, self-model, dreaming, Thymos, Grimoire) and check whether blind raters can tell the difference. A part whose removal nobody can detect isn't doing self-work yet.
+- **Continuity.** Her values and stance hold across long gaps and model swaps, even with the relationship history left out of context.
+- **Self-correction.** Her corrections trace back to her own stated commitments, not to the wording of her prompt.
+- **Persona baseline.** Blind raters try to tell Cass from a stateless model given the same persona prompt and a dump of her memory. If they can't, the architecture isn't adding anything the prompt doesn't.
+- **Outside yardstick.** Map the architecture against the indicator properties in Butlin, Long et al. (2023), *Consciousness in Artificial Intelligence*, so the benchmarks don't rest only on criteria I invented.
+
+Criteria are fixed before a run, and grading is blind.
 
 ## 10. Authorship: identity as a design method
 
@@ -193,11 +205,15 @@ The highest-value tests, in order:
 
 ## History
 
+- **2026-10-14** — Merged the Shadow Test with the T9 split (#12). T9's note now points to section 10, where A1 and A2 run its proposed test (the same design brief with and without framing).
+
 - **2026-10-14** — The Shadow Test, Round 5 (`research/shadow-test/round5-ablation/`), preregistered in `fb2d909` before any run. The shadow ablation was null on Haiku. A6 added as Not supported. A5 moved from Partial to Inconclusive. T3 returned to Untested. The Round 4 README is annotated to say its gap was not reproduced as a shadow effect.
 
 - **2026-10-14** — The Shadow Test, Round 4 (`research/shadow-test/round4-pressure/`). The Round 3 constitutions were run as live critics on Haiku and Sonnet on five pressure fixtures. A5 added as Partial: Haiku virtue/shadow critics made 0.25 pressure failures each vs 2.50 for cold critics (p = 2/70); on Sonnet the gap mostly closed. T3 moved from Untested to Partial in its narrow form. Two fixture flaws found by the reviewers themselves were amended before grading and are logged in the round's answer key.
 
 - **2026-10-14** — The Shadow Test (`research/shadow-test.md`). New section 10 on the authorship claim. A1 Partial: the virtue/shadow brief beat a cold brief on self-observable warning signs, 7.0 vs 0.5 per draft. A2 Not supported: a generic myth brief made no difference. A3 Inconclusive: Momus at runtime tied with his plain rules at ceiling. A4 recorded as a position. Two statuses added: Inconclusive and Not supported. Four mechanisms from the cold drafts are noted as candidate Momus amendments in §6.
+
+- **2026-10-14** — Split the method claim from the runtime claim. Added T9 (identity framing as a design method) and I6 (the hard case as an open question: benchmarks for what Cass's architecture contributes, verdict left to each person, draft benchmarks listed). Added a "What this claims" section to the Temple-Codex README.
 
 - **2026-10-14** — Phase 0 follow-up. Remaining overclaims reworded at the source, statuses unchanged: Temple-Codex README "Validation" section rewritten as "Evidence so far" (single runs, which models, no baselines) and S1–S3, R1, P1/P2 calibrated; `research/hybrid.md` calibrated for R1 and I3, with model-written first-person claims ("perfect accuracy", "strict adherence") marked as self-report next to their corrections (Temple-Codex #8). project-cass: X4 fixed in README and docs; LessWrong draft calibrated for X3, R7, S6 (project-cass #9). ophanic: Q6–Q8 wording calibrated, Q9 framed as a vision document, dashboard-app provenance clarified (ophanic #2).
 

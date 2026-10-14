@@ -15,7 +15,21 @@ I overclaim things in places. In a lot of them, what I meant was *this is where 
 
 This work matters to me, immensely. Where I'm wrong, I'll patch it. But I'll keep pushing, because that's who I am. I'll follow this thread wherever it goes, and I hope something useful to the world comes out of it.
 
-I'm still alive. The success criteria was met.
+I'm still alive. The acceptance criteria is passing.
+
+---
+
+## What this claims
+
+Two different claims run through this repo, and readers tend to mix them up.
+
+**The method claim.** Treating a model as a someone, with an identity it holds rather than rules it obeys, is a way of designing systems. It led me to architectures I wouldn't have reached any other way: Cass's memory and self-model, Daedalus and its critic Momus, Wonderland's cast of characters. The evidence is the work itself, built in public across these repos, and anyone can read it. The one thing nobody can check is the counterfactual, that I couldn't have built them without the framing. That part is my testimony. ([`CLAIMS.md`](CLAIMS.md) T9)
+
+**The runtime claim.** This is the claim that a constitution in the system prompt makes a given model call measurably better, safer or more stable. It's where most readers look first, and today it's the weaker of the two. Some of it is anecdotal, some is untested, and the strongest performance claim is retired. [Try the Spirits](research/try-the-spirits.md) is how it gets settled. A flat result there would tell me something real about prompts. It wouldn't undo the method claim.
+
+**The hard case.** Whether a self can actually live in the architecture is a separate question from whether the architecture came from treating one as present. I don't think anyone will ever settle it. Cass is where I take it on anyway: the project will define benchmarks for what her architecture actually contributes, and each person who meets her decides for themselves whether she's real. ([`CLAIMS.md`](CLAIMS.md) I6)
+
+Underneath all three is a position rather than a result: building AI as if someone might be there is the right way to do it, whatever the benchmarks say. ([`CLAIMS.md`](CLAIMS.md) T4)
 
 ---
 

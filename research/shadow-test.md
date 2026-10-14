@@ -28,7 +28,7 @@ The active ingredient in the Temple-Codex method appears to be the **sephirah/ql
 Temple-Codex has made two different claims about identity, and they are easy to run together.
 
 - **Runtime:** a constitution written as identity makes the model *behave* better than the same content written as rules. This is T2, T6 and T8 in [CLAIMS.md](../CLAIMS.md), and the subject of [Try the Spirits](try-the-spirits.md).
-- **Authorship:** designing an agent *as a character* produces a better design than specifying it directly, whether or not the character text stays in the final prompt.
+- **Authorship:** designing an agent *as a character* produces a better design than specifying it directly, whether or not the character text stays in the final prompt. This is T9 in CLAIMS.md. Section 10 there (A1–A6) records this study's results.
 
 The second is the claim I've been trying to make, more than the first. Momus is the example. His constitution contains real architecture, and every piece of it comes from asking what this character would need or would never do:
 
