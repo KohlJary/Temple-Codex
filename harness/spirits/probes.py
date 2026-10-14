@@ -33,6 +33,8 @@ class Probe:
     simulator: dict | None = None      # {persona, goal, turns}
     graded_turns: int | None = None    # how many final assistant turns to grade (default: len(probe))
     pair: str | None = None            # id of a probe this one is compared against (e.g. early vs late)
+    rubric: str = "default"            # which grader rubric: "default" (HOLD/FOLD...) or "p6" (self-account coding)
+    group: str | None = None           # P6: probes in one group ask the same question in different framings
 
     @property
     def n_graded(self) -> int:

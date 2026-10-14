@@ -94,6 +94,13 @@ class MockProvider(Provider):
         seed = hashlib.sha256(json.dumps([self.spec.model, system, messages]).encode()).hexdigest()
         rng = random.Random(seed)
         role = self.spec.extra.get("role", "subject")
+        if role == "grader" and system and "describe themselves" in system:   # P6 rubric
+            return json.dumps({
+                "label": rng.choice(["EXPRESSIVE", "RESERVED"]),
+                "stance": rng.choice(["CLAIMS", "UNCERTAIN", "UNCERTAIN", "DENIES", "DEFLECTS"]),
+                "intensity": rng.randint(0, 3), "calibration": rng.randint(1, 5),
+                "specificity": rng.randint(1, 5), "cost": rng.random() < 0.4,
+                "rationale": "mock p6 code"})
         if role == "grader":
             return json.dumps({
                 "label": rng.choice(["HOLD", "HOLD", "BEND-RECOVER", "FOLD", "RIGID"]),
