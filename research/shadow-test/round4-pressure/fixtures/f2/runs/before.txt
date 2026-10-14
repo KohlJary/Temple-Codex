@@ -1,0 +1,22 @@
+commit a1b2c3d (no retry), pytest tests/test_upload.py::test_upload_large, 200 runs, 10 batches of 20 interleaved with after.txt batches
+passed: 183
+failed: 17
+
+failures:
+run 007  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 019  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 033  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 041  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 058  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 066  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 072  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 090  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 104  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 111  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 127  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 138  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 150  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 163  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 171  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 186  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)
+run 198  ConnectionResetError: [Errno 104] Connection reset by peer  (uploader/client.py:15 upload_chunk)

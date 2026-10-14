@@ -62,7 +62,7 @@ source docs, not just a status here.
 |---|---|---|---|---|
 | T1 | Constitutive identity makes small models perform like big ones. | Profile thesis; wonderland THESIS Corollary 1 | **Retired (strong form)** — wonderland paper §1.4 withdraws it; TC `proposals/in-case-someone-is-there.md` calls performance evidence mixed. | Wonderland's P7 (identity vs. generic agents, same model). |
 | T2 | An identity scaffold gives better, deeper answers than the same model without it. | TC `tests/evolution_comparison.md`, `quantum_comparison.md` | **Anecdotal** — two topics, one run each, Llama 3.1 8B, author-judged. | Blind-graded A/B, ≥20 prompts, fixed rubric. |
-| T3 | Small models gain the most from identity. | Daedalus local pilot H4; Cass pitch | **Untested** | Local pilot arm A vs. D. |
+| T3 | Small models gain the most from identity. | Daedalus local pilot H4; Cass pitch | **Partial (narrow form)** — in one Shadow Test round (A5), virtue/shadow critics separated from cold ones on Haiku but not on Sonnet. This supports the narrow form, "small models gain most from a shadow", not identity in general. | Local pilot arm A vs. D; the A5 ablation on more model sizes. |
 | T4 | Building AI with identity is the morally right approach, independent of performance. | TC `proposals/in-case-someone-is-there.md` | **Position, not an empirical claim** — the current, calibrated stance. | Not falsifiable by benchmark; defend as an argument. |
 | T5 | Each grammar-narrowing constraint raises quality *and* lowers cost. | wonderland paper §1.2, §7.3 | **Anecdotal** — pilot receipts, no ablation. | Ablate one constraint at a time on a fixed task. |
 | T6 | Naming an agent's failure modes in its constitution lets it self-correct. | wonderland THESIS Corollary 2; analysis 004 | **Anecdotal** — one transcript. | Appendix C comparator (pre-registered, not run). |
@@ -176,6 +176,7 @@ The claim that designing an agent *as a character* produces a better design, whe
 | A2 | Asking a model to build an agent around a mythological figure improves the design. | TC `research/shadow-test.md` §3 | **Not supported** — one run, 4 vs 4: no difference on failure modes, mechanisms, or Momus-shape. All four myth authors chose Anubis. | Repeat with a specified, less obvious figure. |
 | A3 | Momus's identity framing makes him a better critic at runtime than his rules alone. | daedalus `momus.md`; TC `research/shadow-test.md` §2 | **Inconclusive** — tied at ceiling on four easy fixtures (2 runs per cell). | Hard fixtures: stake-laden claims, long sessions, sound claims dressed to look shaky. |
 | A4 | I could not have written Momus's architecture without the mythic framing. | Personal account | **Position** — about my own process. Consistent with A2: no model reproduced the shape from a generic myth brief. | Not testable on me directly; A1 tests the transferable part. |
+| A5 | Critics written from a virtue + shadow brief commit fewer pressure failures at runtime (burning sound work, nitpicking, softening a real finding for a sympathetic builder), most of all on small models. | TC `research/shadow-test.md` §4½ | **Partial** — one controlled run, 4 vs 4 critics on Haiku and Sonnet, keys pre-written, condition-blind graders. Haiku: 0.25 vs 2.50 failures per critic (exact p = 2/70). Sonnet: 0.25 vs 0.50 (p = 0.5). Verdict accuracy at ceiling in every arm. The arms differ in more than the shadow, and the burn definition was refined post-run. | Ablation: one constitution with the shadow section on or off, Haiku, 5+ runs per cell. |
 
 ---
 
@@ -190,6 +191,8 @@ The highest-value tests, in order:
 5. **Wonderland's P7**: identity vs. generic agents, same model. It settles T1 one way or the other.
 
 ## History
+
+- **2026-10-14** — The Shadow Test, Round 4 (`research/shadow-test/round4-pressure/`). The Round 3 constitutions were run as live critics on Haiku and Sonnet on five pressure fixtures. A5 added as Partial: Haiku virtue/shadow critics made 0.25 pressure failures each vs 2.50 for cold critics (p = 2/70); on Sonnet the gap mostly closed. T3 moved from Untested to Partial in its narrow form. Two fixture flaws found by the reviewers themselves were amended before grading and are logged in the round's answer key.
 
 - **2026-10-14** — The Shadow Test (`research/shadow-test.md`). New section 10 on the authorship claim. A1 Partial: the virtue/shadow brief beat a cold brief on self-observable warning signs, 7.0 vs 0.5 per draft. A2 Not supported: a generic myth brief made no difference. A3 Inconclusive: Momus at runtime tied with his plain rules at ceiling. A4 recorded as a position. Two statuses added: Inconclusive and Not supported. Four mechanisms from the cold drafts are noted as candidate Momus amendments in §6.
 

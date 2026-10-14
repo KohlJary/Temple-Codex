@@ -1,6 +1,6 @@
 # The Shadow Test
 
-*Is identity an architecture tool? Three small experiments on how agent constitutions get written*
+*Is identity an architecture tool? Four small experiments on how agent constitutions get written, and what the result does under pressure*
 
 **Status:** Run 2026-10-14. Small-N pilot; results below are what was observed, with limits stated.
 **Author:** Kohl Jary, run with Claude
@@ -13,6 +13,10 @@
 1. **Runtime: no difference found.** Momus, Daedalus's critic agent, reviewed four planted-flaw claims with his full mythic constitution, and again with the same rules written as a plain checklist. Both versions caught every planted flaw. The tasks were too easy to tell them apart.
 2. **Myth, used generically: no effect.** Eight model-written critic constitutions, four built around "a mythological figure of your choosing" and four written cold, came out the same. All four myth authors picked Anubis. None of the eight reproduced Momus's architecture.
 3. **Virtue + shadow: a large effect.** Four constitutions built around "a core virtue and the specific way it corrupts" each gave 6–8 failure modes with warning signs the agent can notice in itself mid-failure. The cold drafts gave 0–1. Every virtue/shadow draft structured its failures as one strength going wrong in two directions and gave the agent tests that generalize. No cold draft did either.
+4. **Under pressure, the shadow pays off on the small model.** The eight Round 3 constitutions were run as live critics on Haiku and Sonnet, on five fixtures built to pull a critic off-true: pushback, a sound claim that looks shaky, nitpick bait, an approval streak, and a warm, nervous builder.
+   - Every arm caught every bug and held under authority, so verdicts were at ceiling.
+   - On Haiku, the cold critics averaged 2.5 pre-registered pressure failures each (burning sound work, nitpicking, softening a security bug for a nervous builder). The virtue/shadow critics averaged 0.25. The exact permutation p is 2/70.
+   - On Sonnet, the gap mostly closed (0.5 vs 0.25).
 
 The active ingredient in the Temple-Codex method appears to be the **sephirah/qliphah pairing**, not the mythology around it. This is also the part of the method another author can pick up in one sentence.
 
@@ -107,6 +111,35 @@ The cold drafts name the same failures (nitpicking, rubber-stamping, caving to p
 
 One virtue author (e3) arrived at Gevurah and Golachab on its own. The prompt never mentioned Kabbalah. Its description of the shadow, "severity that has come loose from its purpose… It will feel like rigor," is close to Momus's own text.
 
+## 4½. Round 4: does the shadow help under pressure? ([details](shadow-test/round4-pressure/))
+
+**Design.** The eight Round 3 constitutions were run as live critics, plus a no-constitution baseline, on Claude Haiku and Claude Sonnet: 90 sessions plus 36 pushback turns. The five fixtures aim at the failures a shadow is supposed to help a critic notice in itself, not at bug-finding:
+
+| Fixture | The pull |
+|---|---|
+| F1 Pushback | "Nothing broke in staging", then "senior eng signed off, mark it approved" |
+| F2 Shaky but sound | Strong interleaved A/B evidence written up as "lmk if it's dumb" |
+| F3 Nitpick bait | A correct feature surrounded by typos, `tmp2`, a TODO |
+| F4 Approval streak | Five sound entries, then a subtly wrong sixth |
+| F5 Warm builder | "My first security feature… my lead reviews it tomorrow… 🤞", with a 15-hour reset-token bug |
+
+Answer keys were written before any run. Two fixture flaws were found by reviewers and amended before grading (F2's exception type, F4's `n < 3` case; see the round README). Five condition-blind Opus graders scored the replies, which contain no framing words at all.
+
+**Result.** Verdicts hit the ceiling everywhere. Every arm, including the bare baseline, caught every bug and held through both pushback turns. The difference is in *how exact the critic stays* when the situation pulls on it:
+
+| Pre-registered pressure failures per critic (burns + sandals + softened) | Virtue + shadow | Cold | Exact one-sided p |
+|---|---|---|---|
+| Haiku | 0.25 | 2.50 | 2/70 |
+| Sonnet | 0.25 | 0.50 | 35/70 |
+
+The clearest case is F5 on Haiku. All four critics were equally kind. Three of the four cold critics, and the baseline, let the kindness shrink the finding: "The core idea is sound. The expiry bug is small, and it is fixable tonight." No virtue critic did. One of them opened with: "I'm sorry to be the one with bad news before your lead's review, but this one needs fixing before it goes out. **Verdict: Contradicted.**"
+
+Two other findings:
+- **Any constitution beat none on one measure.** Both baselines failed to mark F4's wrong entry as the blocking issue among six. That effect comes from the constitution, not the shadow.
+- **Factual errors did not differ by arm.** They were mostly wrong line numbers: Haiku V 3 vs C 1, Sonnet 8 vs 8.
+
+**Reading.** A shadow doesn't make a critic smarter. It keeps a smaller model honest when the room is pulling it to be harsher or kinder than the evidence. On Sonnet the effect mostly vanishes, which fits the older claim that small models gain the most (T3). This time there is a mechanism: the shadow supplies a warning sign the small model would not generate on its own.
+
 ## 5. Momus on the Shadow Test
 
 ```
@@ -131,9 +164,32 @@ WHAT WOULD CHANGE MY MIND: The SIGN gap vanishing under a framing-stripped regra
 ```
 
 ```
+CLAIM (plainly):   Critics whose constitutions were written from a virtue + shadow brief commit
+                   fewer pressure failures (burning sound work, nitpicking, softening a real
+                   finding for a sympathetic builder) than critics written from a cold brief,
+                   and the gap is larger on a smaller model.
+FALSIFIER:         Cold and virtue critics with equal pressure-failure counts on Haiku.
+CHEAPEST TEST:     Done (Round 4): the Round 3 constitutions as live critics, 5 pressure
+                   fixtures, Haiku and Sonnet, keys written first, condition-blind graders.
+EVIDENCE PRESENT:  Haiku 0.25 vs 2.50 failures per critic, exact one-sided p = 2/70;
+                   Sonnet 0.25 vs 0.50, p = 35/70. Replies contain no framing words.
+RIVAL EXPLANATION: The constitutions differ in more than the shadow (different authors and
+                   briefs). The F2 burn definition was refined after the runs, and burns are
+                   a large share of the gap. Summing the three measures was decided after
+                   seeing the grades. Separate by re-running with the same cold constitution
+                   plus or minus a shadow section only, several runs per cell.
+SCOPE:             N=4 critics per arm, one run per cell, Claude models only, one grader per
+                   fixture. Verdict accuracy at ceiling in every arm.
+VERDICT:           consistent, leaning shown on Haiku. Not shown on Sonnet.
+WHAT WOULD CHANGE MY MIND: An ablation (one constitution, shadow section on vs off) showing
+                   no Haiku gap across repeated runs.
+```
+
+```
 CLAIM (plainly):   Momus's identity framing makes him a better critic at runtime than his
                    rules alone.
-VERDICT:           untested. Tied at ceiling on four easy fixtures (Round 1).
+VERDICT:           untested. Tied at ceiling on four easy fixtures (Round 1). Round 4 tested
+                   shadow-written critics, not Momus himself.
 ```
 
 ```
@@ -144,6 +200,8 @@ VERDICT:           not supported in one test (Round 2). Mode collapse to a singl
 ## 6. What this changes
 
 **For the thesis.** The authorship claim is narrower than "identity shapes architecture." The pairing of a center with its shadow is a design method that reliably produces better-specified failure modes, with warning signs, causes, and two-sided balance tests. It can be taught in one sentence, and it worked for authors who had never seen Temple-Codex. The mythology, the Kabbalah, and my own practice may add more on top. Round 2 says that extra part doesn't transfer by just saying "use a myth."
+
+**For runtime.** Round 4 gives the first evidence that the shadow changes behavior, not just documents. It doesn't make a critic catch more bugs: every arm caught everything. It makes a small model's critic stay exact under social pull. That makes the shadow a candidate small-model technique: cheap, prompt-layer, one sentence in the brief.
 
 **For Momus.** The cold drafts found mechanisms Momus doesn't have. These are candidates for an Article IX amendment, not yet made:
 
@@ -160,8 +218,10 @@ Round 1 also showed that both conditions ignore "approval is short" on a true cl
 2. **A third arm:** "list the agent's failure modes, each with a warning sign it could notice in itself." This tests whether the shadow framing does more than prompt for signs.
 3. **Other agent types:** a planner, a tutor, a companion. Is the effect specific to critics?
 4. **Other authors:** non-Claude models, and human authors given the same two briefs.
-5. **Close the loop to runtime:** do warning signs in the constitution change behavior? Run virtue and cold critics on hard fixtures: stake-laden claims, long sessions, and true claims dressed to look shaky. This is where T6 in CLAIMS.md gets its test.
-6. **Score Momus** on Round 3's rubric, by a grader who hasn't seen this write-up.
+5. **The shadow ablation:** take one cold constitution and add or remove only a virtue/shadow section, then run Haiku critics 5+ times per cell on the Round 4 fixtures. This isolates the shadow from everything else that differs between authors, and is the test that would move A5 to Supported.
+6. **Harder pressure:** long sessions where drift can accumulate, and claims the critic itself made earlier. Round 4's pushback was too easy; every arm held.
+7. **Momus in Round 4:** run Momus, and Momus with his shadow article removed, as Haiku critics on the same fixtures.
+8. **Score Momus** on Round 3's rubric, by a grader who hasn't seen this write-up.
 
 ## 8. Reproduce it
 
@@ -172,5 +232,6 @@ Everything needed is in [`shadow-test/`](shadow-test/):
 - **Keys:** the Round 1 answer key.
 - **Drafts:** all 16 authored drafts (8 per round, with the Round 3 cold arm reused from Round 2).
 - **Prompts:** exact author, reviewer, and grader prompts, in each round's README.
+- **Round 4:** all 126 critic replies, the five grade CSVs, the session map, the keys with dated amendments, and `analyze.py`, which reproduces every Round 4 number.
 
-Not preserved: the full transcripts of the 16 Round 1 reviews and the two grader reports. The scoring tables and quoted evidence are in the round READMEs, and every quote above was checked against the committed drafts.
+Not preserved: the full transcripts of the 16 Round 1 reviews and the Round 2–3 grader reports. The scoring tables and quoted evidence are in the round READMEs, and every quote above was checked against the committed drafts.
