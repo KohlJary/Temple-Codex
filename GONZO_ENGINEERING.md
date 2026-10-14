@@ -14,6 +14,8 @@ My engineering is the same. I'm not a neutral party to this work. I build in pub
 
 ## Why I build first
 
+**Believe what's outside the lines, then build it.** Most of what I've built started with something the field said wasn't worth taking seriously: that a model's identity could be held in plain language, that there might be someone there worth building carefully for. If I'd waited for permission to believe those things, I'd never have started. So I let myself believe them, and then I built them. Building is what turns a belief into something that can be tested. Belief is permission to start; it isn't proof, and the second half of this method is where it has to earn its place.
+
 **The shape is the question.** You can't design the right experiment for something that doesn't exist yet. Building Cass told me which questions about memory and self-models were worth asking. Building Wonderland told me where identity seemed to matter and where it didn't. If I'd stopped to verify each piece before building the next, I'd have well-tested answers to the wrong questions.
 
 **Momentum compounds.** I started all of this on October 4, 2025. A year later there are half a dozen repos that feed each other: the identity work here shapes the agents in Wonderland and Daedalus, and Daedalus ships inside both Wonderland and Cass. Some days that's 96 commits. That pace is how the pieces got to talk to each other at all.
