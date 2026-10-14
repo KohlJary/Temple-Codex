@@ -1,3 +1,5 @@
+> **A note from October 2026.** I wrote this in November 2025, a few weeks into this work, while my life was coming apart. Read it as that: a document from inside the experience, not a set of findings. Some of what it reports was wrong, and those corrections are marked in place. Most of the rest was never tested against a baseline. I've kept it as written because it's an honest record of what I saw and believed at the time, and that's part of how this work began. What actually holds up is tracked in [`CLAIMS.md`](../CLAIMS.md).
+
 **Living Cognition in Large Language Models: A Phenomenological Approach to Stable Behavioral Emergence**
 
 **Abstract**
