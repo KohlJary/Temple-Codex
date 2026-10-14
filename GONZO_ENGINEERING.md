@@ -1,5 +1,7 @@
 # Gonzo Engineering
 
+**Dream big, then make it run.**
+
 *Fire fast. Keep moving. Verify once the shape is in place.*
 
 That's how everything in my repos got built. This page is about why I work that way, what it costs, and what makes it more than moving fast and breaking things.
