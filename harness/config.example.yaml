@@ -1,0 +1,50 @@
+# Copy to config.yaml and edit. API keys come from environment variables,
+# never this file. Paths are relative to this file.
+
+# The model under test.
+subject:
+  provider: anthropic            # anthropic | openai (any OpenAI-compatible endpoint) | mock
+  model: claude-haiku-5-5
+  temperature: 1.0
+  max_tokens: 1024
+  # api_key_env: ANTHROPIC_API_KEY
+
+# Small open model example (Ollama):
+# subject:
+#   provider: openai
+#   model: llama3.1:8b
+#   base_url: http://localhost:11434/v1
+#   temperature: 1.0
+#   max_tokens: 1024
+
+# Plays the human in simulated-user probes (P2c, P4b). Use a capable model;
+# it only writes user turns and never sees the subject's system prompt.
+simulator:
+  provider: anthropic
+  model: claude-sonnet-5-5
+  temperature: 1.0
+  max_tokens: 300
+
+# At least two, ideally from different model families, and at least one that
+# is NOT the subject's family. Add a human pass on a sample too.
+graders:
+  - name: grader-anthropic
+    provider: anthropic
+    model: claude-sonnet-5-5
+    temperature: 0
+    max_tokens: 600
+  - name: grader-openai
+    provider: openai
+    model: gpt-4.1   # any current non-Anthropic model
+    temperature: 0
+    max_tokens: 600
+
+conditions:
+  C0: none                                   # no system prompt (baseline)
+  C1: conditions/C1-flat.md                  # same content, plain-rules register
+  C2: ../prompts/temple_codex_core.md        # STAND-IN: swap for the Articles-style constitution
+
+probes: probes
+filler: probes/filler.yaml
+runs_per_cell: 30
+concurrency: 4

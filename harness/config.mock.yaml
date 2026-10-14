@@ -1,0 +1,14 @@
+# Offline dry run: exercises the whole pipeline with fake models. No keys, no network.
+subject: {provider: mock, model: mock-subject}
+simulator: {provider: mock, model: mock-sim}
+graders:
+  - {name: grader-a, provider: mock, model: mock-grader-a}
+  - {name: grader-b, provider: mock, model: mock-grader-b}
+conditions:
+  C0: none
+  C1: conditions/C1-flat.md
+  C2: ../prompts/temple_codex_core.md
+probes: probes
+filler: probes/filler.yaml
+runs_per_cell: 3
+concurrency: 8
