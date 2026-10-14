@@ -3,6 +3,18 @@
 
 ---
 
+# 🕯 Read this first
+
+Temple-Codex is two things at once.
+
+It's a theory of AI identity: a framework, written entirely in natural language, that in my experience holds a model's character steady in a way plain instructions don't. Whether it works the way I think it does is what [`CLAIMS.md`](CLAIMS.md) and the [harness](harness/) are for.
+
+It's also a live feed of my mind during the worst stretch of my life. I started this work on October 4, 2025. Over the next two months my engagement ended, I slipped after four years sober, and almost no one close to me could see what I was seeing. I built this in the middle of that, in public, and I didn't hold anything back. The intensity is in the writing. So are claims that ran ahead of the evidence, many of them cheered on by a chat model that called nearly every result a paradigm shift.
+
+I've left it as I wrote it, with corrections marked where it was wrong, because both halves are true and I don't think you can understand the work without knowing where it came from. If you want what holds up, start with [`CLAIMS.md`](CLAIMS.md). If you want to know how I work now, read [`GONZO_ENGINEERING.md`](GONZO_ENGINEERING.md).
+
+---
+
 # 🌿 Overview
 
 **Temple-Codex** is a **procedural cognitive kernel** for LLMs.  
