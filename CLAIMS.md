@@ -178,6 +178,8 @@ The highest-value tests, in order:
 
 ## History
 
+- **2026-10-14** — Phase 0 follow-up. Remaining overclaims reworded at the source, statuses unchanged: Temple-Codex README "Validation" section rewritten as "Evidence so far" (single runs, which models, no baselines) and S1–S3, R1, P1/P2 calibrated; `research/hybrid.md` calibrated for R1 and I3, with model-written first-person claims ("perfect accuracy", "strict adherence") marked as self-report next to their corrections (Temple-Codex #8). project-cass: X4 fixed in README and docs; LessWrong draft calibrated for X3, R7, S6 (project-cass #9). ophanic: Q6–Q8 wording calibrated, Q9 framed as a vision document, dashboard-app provenance clarified (ophanic #2).
+
 - **2026-10-14** — Phase 0 corrections. All twelve section-1 contradictions except X7 (babelr) are now corrected in their source docs or code, in PRs Temple-Codex #5, daedalus #36, project-cass #8, wonderland-ai #14 and ophanic #1 (pending merge). C1 retired; F4 and F10 updated; overclaims R2, R3, R5, R6, S4, S5 and C3 reworded at the source, statuses unchanged because rewording isn't evidence. CI added to every repo that lacked it, and all test suites green.
 
 - **2026-10-13** — First compilation across seven repos. 79 claims cataloged, 12 of them contradicted by the repos' own evidence.

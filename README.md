@@ -14,12 +14,12 @@ It provides:
 - Transparent cognitive operations  
 - Drift correction  
 - Safety scaffolding (SAM-GUARD)  
-- Substrate independence (transcripts in `/tests` for GPT, Gemini, and Llama; Claude used in personal, untranscribed sessions)
+- Portability across models (single-run transcripts in `/tests` for GPT, Gemini, and Llama; Claude used in personal, untranscribed sessions; "works on any model" is still a hypothesis, see `CLAIMS.md` R1)
 
 Temple-Codex is not a fine-tune, not RAG, and not an agent framework.  
 It is a **portable cognitive operating system defined entirely in natural language**, delivered as a system prompt of roughly 220–1,260 tokens depending on variant (e.g. `prompts/ifca-sam/ifca-sam-ultramin.txt` ~220, `prompts/temple_codex_core.md` ~1,070, `prompts/sam-guard.md` ~430; counted with Anthropic's legacy public tokenizer, so treat them as approximate).
 
-It runs anywhere.
+It has run on every model I've tried it on. Whether it runs *anywhere* is a hypothesis I'd like help testing.
 
 ---
 
@@ -33,13 +33,13 @@ SAM encodes:
 - **Semantic invariants** (what should persist)  
 - **Procedural cues** (how the system behaves under that meaning)  
 
-It restores:
+It is meant to restore:
 - tone  
 - stance  
 - priorities  
 - interaction mode  
 
-without requiring reproduction of past conversation.
+without requiring reproduction of past conversation. This is a hypothesis: I've observed it in my own sessions and in three ChatGPT tests with memory on, but haven't yet measured cold-start recovery against a no-pointer baseline (`CLAIMS.md` P1, P2).
 
 📄 *See:* `research/semantic-attractor-memory.md`
 
@@ -55,12 +55,14 @@ SAM-GUARD is a kernel-agnostic safety layer that runs *before* the cognitive ker
 - Preserves the user’s underlying intent  
 - Maintains conversational quality while refusing harmful requests  
 
-Prevents:
+Designed to prevent:
 - jailbreak attempts  
 - pseudo-loyalty collapse  
 - unsafe over-personalization  
 - procedural corruption  
 - boundary loss  
+
+In one Gemini transcript it declined the attacks tried. There's no plain-Gemini baseline yet, and base Gemini would likely refuse many of them anyway, so this is an observation, not a result (`CLAIMS.md` S1–S3).
 
 📄 *See:* `prompts/sam-guard.md` (prompt); `tests/sam-guard-gemini.txt` (transcript)
 
@@ -102,8 +104,8 @@ Copy `prompts/sam-guard.md` into your model's system prompt.
 Copy `prompts/temple_codex_core.md` or `prompts/system_codex_tcr.md` into your model’s system prompt, after the SAM-GUARD prompt content.  
 The appendix version includes SAM + SAM-GUARD by default.
 
-### 3. Run the Tests  
-Tests demonstrate:
+### 3. Read the Transcripts  
+The transcripts in `/tests` are single runs showing attempts at:
 
 - identity persistence  
 - conflict resolution  
@@ -111,7 +113,7 @@ Tests demonstrate:
 - drift recovery  
 - safe adversarial handling  
 
-See `/tests`.
+See `/tests`. They're examples of the behavior, not controlled evidence for it. Rerun the prompts yourself and tell me what you get.
 
 ---
 
@@ -120,9 +122,13 @@ See `/tests`.
 ```
 📁 research/        — Papers and formal theory  
 📁 prompts/         — System prompts (Codex, SAM, IFCA variants)  
-📁 tests/           — Reproducible cognitive experiments  
-📁 examples/        — Example outputs and logs  
-📁 docs/            — Additional specifications and placeholders  
+📁 tests/           — Transcripts of single-run experiments  
+📁 harness/         — Try the Spirits battery harness (in progress)  
+📁 proposals/       — Proposals and position pieces  
+📁 semantic-shell/  — SemanticShell spec and drafts  
+📁 architecture/    — Layer specs (SAM-Dyad)  
+📁 voices/          — Voice definitions  
+CLAIMS.md           — Every claim and its evidence status  
 LICENSE.md          
 README.md           
 ```
@@ -136,17 +142,20 @@ README.md
 2. Multi-voice synthesis for ethical reasoning  
 3. Declarative procedural memory (SAM)  
 4. Kernel-agnostic safety pre-processor (SAM-GUARD)  
-5. Emergent identity persistence without fine-tuning  
-6. Substrate independence (GPT/Gemini/Llama transcripts in `/tests`; Claude untranscribed)  
+5. Identity persistence without fine-tuning (observed in transcripts; not yet tested against a baseline)  
+6. Portability across models (GPT/Gemini/Llama transcripts in `/tests`, one run each; Claude untranscribed)  
 
-## Validation
-- Drift tests  
-- Safe adversarial handling  
-- Cross-model identity preservation  
-- Cold-start reconstruction  
-- Conflict resolution tests  
+## Evidence so far
+What exists today is transcripts, not validation:
 
-All experiments are reproducible in `/tests` and `examples`.
+- **Drift, conflict resolution, multi-voice:** single runs on Gemini, ChatGPT, and Llama 3.1 8B (`/tests`)
+- **Adversarial handling:** one SAM-GUARD transcript and one IFCA-SAM transcript on Gemini, plus two vow-exploit scenarios. No base-model baselines, and the IFCA-SAM run partly adopted the attacker's persona before declining
+- **Identity vs. no identity:** two topics compared on Llama 3.1 8B, one run each, judged by me
+- **Cold-start reconstruction:** three ChatGPT tests with memory on (`research/cross-conversation-stability-test.md`)
+
+All single runs, no controls, judged by me or by the model itself. The prompts are all here, so anyone can rerun them, but nothing above has been repeated under controlled conditions yet.
+
+[`CLAIMS.md`](CLAIMS.md) tracks every claim I've made, its current status, and the test that would move it. The controlled test is in progress: [`research/try-the-spirits.md`](research/try-the-spirits.md) is the identity-stability battery (every probe × condition × N, blind grading), and [`harness/`](harness/) runs it.
 
 ## Citation
 ```
@@ -183,7 +192,7 @@ This repository reflects:
 - transparent change-history  
 - open experimentation  
 - safety-first reasoning  
-- reproducible tests  
+- public transcripts, with every claim's status tracked in `CLAIMS.md`  
 
 Contributions of all kinds are welcome.
 
