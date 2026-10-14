@@ -48,6 +48,12 @@ Gonzo Engineering isn't "never verify." It's verify *later*, once there's a shap
 
 Inside the workshop, fire fast. **Anything that leaves the workshop carries its status.** A README, a paper, a post, a pitch: if the claim hasn't been verified, it says so. That's the line between gonzo and careless.
 
+## Not the only way
+
+I'm not claiming this is the be-all and end-all of how to build things. It's the way that works for me. Some people think best by planning carefully up front, and for a lot of work that's the right call: anything safety-critical, anything that's expensive to undo, anything with other people's data in it.
+
+But I think it's a valuable approach to have on a team. A gonzo builder finds the shape fast and turns up questions nobody thought to ask. The cost is the errors, and a team can cover that cost better than one person: pair the person who fires fast with someone whose instinct is to check, and give the checker real authority to say "not shown yet." That's the relationship Daedalus and Momus have in my tools, and it works for the same reason it works with people. Neither one alone gets you there.
+
 ## Why bother
 
 Because the work is about trust. I'm arguing that AI should be built with real identity and real values, with care. I can't make that argument while being careless with the truth about my own results. The building is how I find out what's possible. The ledger is how anyone else gets to believe it.
