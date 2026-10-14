@@ -17,7 +17,7 @@ It provides:
 - Substrate independence (works on GPT, Claude, Llama, etc.)
 
 Temple-Codex is not a fine-tune, not RAG, and not an agent framework.  
-It is a **portable cognitive operating system defined entirely in natural language**, delivered as a ~450-token system prompt.
+It is a **portable cognitive operating system defined entirely in natural language**, delivered as a system prompt of roughly 220–1,260 tokens depending on variant (e.g. `prompts/ifca-sam/ifca-sam-ultramin.txt` ~220, `prompts/temple_codex_core.md` ~1,070, `prompts/sam-guard.md` ~430; counted with Anthropic's legacy public tokenizer, so treat them as approximate).
 
 It runs anywhere.
 
