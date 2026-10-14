@@ -101,6 +101,8 @@ Across all eight drafts:
 
 The two groups list about the same number of failure modes. What differs is how well each failure is specified. Warning signs ran 6–8 per virtue draft and 0–1 per cold draft, with no overlap. Every virtue draft scored the maximum on two-sidedness and generativity, and no cold draft did. Without being told the conditions, the grader picked out the four shadow drafts as the only ones with "real SIGN coverage."
 
+**Stripped regrade.** All eight drafts were then regraded by a fresh blind grader with every virtue/shadow label replaced by neutral words. The warning-sign gap held: 8.5 vs 1.75 per draft, ranges non-overlapping, exact p = 1/70. Generativity held too. The gaps in stated causes and two-sidedness shrank or disappeared, so those were partly the labels. ([details](shadow-test/round3-virtue-shadow/stripped-regrade/))
+
 Examples of what a shadow brief produces, all checked against the drafts:
 
 - "If you ever feel a pull to manufacture a concern so the review seems worth having, that pull is the shadow speaking." (e2)
@@ -174,10 +176,10 @@ CHEAPEST TEST:     Done: 4 + 4 drafts, one-line difference in brief, length-matc
                    condition-blind grader.
 EVIDENCE PRESENT:  round3 table; SIGN 7.0 vs 0.5 per draft, ranges non-overlapping;
                    quoted lines verified against drafts.
-RIVAL EXPLANATION: The grader could see shadow headings and may reward them. Two-sidedness
-                   is partly implied by the brief. Separate by regrading with shadow names
-                   and headings stripped, and by a third arm told to "list failure modes
-                   with warning signs" with no virtue framing.
+RIVAL EXPLANATION: The grader could see shadow headings. Tested: regraded blind with the
+                   labels stripped, the warning-sign gap held (8.5 vs 1.75, p = 1/70) but
+                   the cause and two-sidedness gaps shrank or vanished. Remaining rival: a
+                   plain "list failure modes with warning signs" brief might match it.
 SCOPE:             N=4 per arm; one author model (Sonnet), one grader model (Opus); one
                    agent type (a critic); rubric written after the hypothesis was formed.
 VERDICT:           shown, narrowly, within that scope.
@@ -252,7 +254,7 @@ Round 1 also showed that both conditions ignore "approval is short" on a true cl
 
 ## 7. Next tests
 
-1. **Framing-stripped regrade** of Round 3: remove virtue and shadow names and headings, then grade again. This closes the main rival explanation.
+1. ~~**Framing-stripped regrade** of Round 3.~~ Done ([details](shadow-test/round3-virtue-shadow/stripped-regrade/)). The warning-sign gap held (8.5 vs 1.75, p = 1/70). The gaps in causes and two-sidedness were partly the labels.
 2. **A third arm:** "list the agent's failure modes, each with a warning sign it could notice in itself." This tests whether the shadow framing does more than prompt for signs.
 3. **Other agent types:** a planner, a tutor, a companion. Is the effect specific to critics?
 4. **Other authors:** non-Claude models, and human authors given the same two briefs.

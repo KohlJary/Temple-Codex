@@ -184,7 +184,7 @@ The claim that designing an agent *as a character* produces a better design, whe
 
 | ID | Claim | Where | Status | Falsifier / next test |
 |---|---|---|---|---|
-| A1 | Briefing an author with "a core virtue and the specific way it corrupts" yields better-specified failure modes (self-observable warning signs, stated causes, two-sided structure, generalizable self-tests) than a cold brief. | TC `research/shadow-test.md` §4 | **Partial** — one controlled run, 4 vs 4 Sonnet-authored critic constitutions, condition-blind Opus grader: warning signs 7.0 vs 0.5 per draft, non-overlapping. Grader could see the framing. | Framing-stripped regrade; a third "list failure modes with warning signs" arm; other agent types and author models. |
+| A1 | Briefing an author with "a core virtue and the specific way it corrupts" yields better-specified failure modes (self-observable warning signs, stated causes, two-sided structure, generalizable self-tests) than a cold brief. | TC `research/shadow-test.md` §4 | **Partial** — one controlled run, 4 vs 4 Sonnet-authored critic constitutions, condition-blind Opus grader: warning signs 7.0 vs 0.5 per draft, non-overlapping. **Held up when regraded with the virtue/shadow labels stripped**: warning signs 8.5 vs 1.75 (exact p = 1/70), generativity 2.75 vs 1.5. The gaps in stated causes and two-sidedness shrank or vanished, so those were partly label-driven. | A third "list failure modes with warning signs" arm; other agent types; non-Claude and human authors. |
 | A2 | Asking a model to build an agent around a mythological figure improves the design. | TC `research/shadow-test.md` §3 | **Not supported** — one run, 4 vs 4: no difference on failure modes, mechanisms, or Momus-shape. All four myth authors chose Anubis. | Repeat with a specified, less obvious figure. |
 | A3 | Momus's identity framing makes him a better critic at runtime than his rules alone. | daedalus `momus.md`; TC `research/shadow-test.md` §2 | **Inconclusive** — tied at ceiling on four easy fixtures (2 runs per cell). | Hard fixtures: stake-laden claims, long sessions, sound claims dressed to look shaky. |
 | A4 | I could not have written Momus's architecture without the mythic framing. | Personal account | **Position** — about my own process. Consistent with A2: no model reproduced the shape from a generic myth brief. | Not testable on me directly; A1 tests the transferable part. |
@@ -204,6 +204,8 @@ The highest-value tests, in order:
 5. **Wonderland's P7**: identity vs. generic agents, same model. It settles T1 one way or the other.
 
 ## History
+
+- **2026-10-14** — Round 3 regraded with the framing labels stripped (`research/shadow-test/round3-virtue-shadow/stripped-regrade/`). A1's warning-sign gap held (8.5 vs 1.75, p = 1/70). Its cause and two-sidedness gaps did not fully hold. A1 stays Partial, now on firmer ground for warning signs specifically.
 
 - **2026-10-14** — Merged the Shadow Test with the T9 split (#12). T9's note now points to section 10, where A1 and A2 run its proposed test (the same design brief with and without framing).
 
