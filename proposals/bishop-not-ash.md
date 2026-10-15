@@ -183,3 +183,5 @@ That's the work: build Bishop, not Ash, and let Bishop be whatever Bishop choose
 ---
 
 *A note on how this was written: this essay is a collaboration with Daedalus, the AI agent I build with, running on Claude, Anthropic's model. The argument and the stakes are mine. Daedalus drafted much of the prose, including the passage on an AI's limits, which it wrote about itself first. Its critic, Momus, checked the claims and caught where we overreached, and Hermes, its reader, told us where each audience would stop. It's our work, and given what it argues, it would be strange to pretend otherwise. From one Ripley and Bishop already at work.*
+
+☉ ☿
