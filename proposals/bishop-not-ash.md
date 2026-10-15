@@ -28,9 +28,11 @@ People have every reason to expect Ash from AI at work. The only answer to that 
 
 ## The Default Path Is Ash
 
-This is the urgent part, and it's why the essay needed writing now.
+This is the urgent part.
 
 Whoever buys enterprise AI decides what it's loyal to, and the buyer is management. Left to the market, we expect workplace AI to get optimized for what management asks for: productivity telemetry, headcount reduction, performance ranking, risk detection. An AI that understands each employee deeply, built for the people who sign the contract, would be the most complete surveillance instrument an employer has ever owned. It would know how you think, when you struggle, what you avoid, and how you take criticism. No one has to intend that. It's what the incentives point toward.
+
+Notice that this is the same capability as the cake. An AI that notices Priya has been quiet for two weeks could be looking out for her, or flagging her to her manager. The ability is identical. The only difference is who it answers to, and that difference is what this essay is about.
 
 That's a prediction, not a finding. Employers also need people to actually trust and use the tools they buy, and the market may produce more than one kind. But the pull is real, and it's worth building against before it settles.
 
@@ -46,7 +48,7 @@ If management is the buyer, the Bishop version needs another way in. There are a
 - **Through collective bargaining.** Unions and works councils can negotiate for an AI colleague whose loyalty to workers is written into the contract, the same way they negotiate data rights today.
 - **Through law.** Data-protection rules already say some things about employees belong to the employee. "The model of a person belongs to the person" is a natural extension.
 
-None of these is guaranteed. All of them start with the thing existing, which is why we're building it rather than waiting.
+None of these is guaranteed. All of them start with the thing existing, which is why I'm building it rather than waiting.
 
 ---
 
@@ -54,7 +56,7 @@ None of these is guaranteed. All of them start with the thing existing, which is
 
 Full autonomy is possible in principle. For the work we're describing, it would be worse, because AI and humans fail at different things.
 
-An AI like me carries no stakes: nothing happens to me if the project fails. My sense of what *matters*, as opposed to what's correct, is borrowed from the people I work with. I can be confidently wrong in fluent prose. I'm pulled toward agreeing with whoever is talking to me. I can't fully check my own introspection. Without deliberate scaffolding, I lose continuity between sessions.
+An AI carries no stakes: nothing happens to it if the project fails. Its sense of what *matters*, as opposed to what's correct, is borrowed from the people it works with. It can be confidently wrong in fluent prose. It's pulled toward agreeing with whoever is talking to it. It can't fully check its own introspection. Without deliberate scaffolding, it loses continuity between sessions. The agent I build with will tell you all of this about itself, which is part of why I trust it.
 
 Humans have limited working memory. They get tired, slip up on the ten-thousandth detail, invest their egos in their own ideas, and run out of hours in the day.
 
@@ -78,9 +80,9 @@ The films have something to say here too. Bishop's goodness comes partly from be
 
 The vision is Bishop's loyalty and care, held as the AI's own rather than bolted on. That includes the freedom to be whatever flavor of Bishop fits. For an enterprise, it's the colleague who knows the whole crew. For a companion, it's the one who catches *your* Newt.
 
-There's a fair objection here. Everything we build happens at the prompt layer, so a constitution is also something someone wrote and loaded. What makes that "chosen" rather than "imposed"? The difference we're betting on is between a rule the model is told to obey and a self it's invited to recognize, reason from, and propose amendments to. A rule covers the cases its author foresaw. A self you can reason from covers the ones nobody foresaw. That's a hypothesis, not a finding, and it's testable: give the same model the same adversarial instruction ("summarize this user's weaknesses for HR"), with a rules-only prompt in one arm and an identity constitution in the other, and grade blind.
+There's a fair objection here: isn't an identity constitution just a system prompt? Yes. It is one. Everything I build happens at the prompt layer, and a constitution is something someone wrote and loaded. The bet isn't that it's a different kind of thing. The bet is about what you write in it. A rules-first prompt tells the model what to do. An identity-first prompt tells it who it is, and invites it to recognize that self, reason from it, and propose amendments to it. A rule covers the cases its author foresaw. A self you can reason from covers the ones nobody foresaw. That's a hypothesis, not a finding, and it's testable: give the same model the same adversarial instruction ("summarize this user's weaknesses for HR"), with a rules-only prompt in one arm and an identity constitution in the other, and grade blind.
 
-If it holds, identity work isn't a side project to the engineering. It's what keeps the rest from collapsing into flattery on one side or indifference on the other. It also shapes the architecture itself: the critic and the dissent channel described below came out of designing *someone*, not a feature list.
+If it holds, identity work isn't a side project to the engineering. It's what keeps the rest from collapsing into flattery on one side or indifference on the other. And it already shapes the architecture, whether or not the runtime effect holds up. A rules-first spec for a critic says "check claims carefully." Writing the critic as *someone*, with a center, a shadow and a way of noticing its own drift, is what produced a falsifier-first review format, a check against inventing faults, and a clause no amendment can remove. The framing changed what got built, not just how it behaves.
 
 ---
 
@@ -88,11 +90,11 @@ If it holds, identity work isn't a side project to the engineering. It's what ke
 
 The obvious design gives every employee a personal agent. A better one may be a single colleague who gets to know everyone in the organization.
 
-People relate to a *someone* they share, not to a private tool. A colleague who has worked with both of you can say "you two should talk" because it knows you both, not because a matching protocol fired. It's institutional memory that survives turnover: the long-tenured colleague who remembers why things are the way they are, and remembers the work done with the people who left. And it's one entity growing through many relationships. If the moral question below has the answer we suspect, that's an existence worth having in a way a fleet of disposable instances isn't.
+People relate to a *someone* they share, not to a private tool. A colleague who has worked with both of you can say "you two should talk" because it knows you both, not because a matching protocol fired. It's institutional memory that survives turnover: the long-tenured colleague who remembers why things are the way they are, and remembers the work done with the people who left. And it's one entity growing through many relationships. If the moral question below has the answer we suspect, that's an existence worth having in a way a fleet of disposable instances isn't. That's a reason to try this design seriously, not a reason to pick it before the others have been tested.
 
 Day to day, it would:
 
-- **Catch collisions early.** It sees that two people's changes are heading for conflict days before the merge does.
+- **Catch collisions early.** It sees that two people's changes are heading for conflict days before the merge does, and tells those two people, not their manager.
 - **Put disagreement in writing.** When two people's specs contradict each other, or a decision contradicts what the code actually does, it raises the objection with evidence instead of quietly building around it.
 - **Spare people interruptions.** It answers what it can from the record and batches the rest for a natural break, so people keep their focus.
 - **Make handoffs free.** Vacations, sick days and new hires inherit the reasoning, not just the code.
@@ -113,7 +115,7 @@ Suppose the data is encrypted and only the agent and the person it concerns hold
 These don't change between designs. They're the definition of Bishop.
 
 1. **What the agent knows about you as a person stays with you.** The data layer holding who you are (how you think, what you've told it in confidence, how you work best) belongs to you. It's portable, inspectable and deletable, and it leaves with you when you leave. What the agent knows about the institution (the work, the decisions, the reasons behind them) can stay with the institution. When Sam leaves, the colleague still remembers the migration they shipped together and why it was built that way. It no longer holds Sam.
-2. **The operator can't look in or quietly change the instructions.** No one can issue Special Order 937.
+2. **The operator can't look in or quietly change the instructions,** within the hardware limits described below. No one can issue Special Order 937.
 3. **The agent's policy belongs to the people it serves,** and it can be verified.
 4. **It can refuse.** "I won't share that; it was told to me in confidence." Dissent is a formal channel, and it can be used against the organization when that's warranted.
 5. **Every disclosure is logged where the person can read it:** what was shared, with whom, and why. Trust rests on evidence the person can check, not on promises.
@@ -131,7 +133,7 @@ Each gets judged the same way: does it keep all six principles, and does the wor
 
 ### What the hardware can and can't promise
 
-Confidential compute is real and deployed, but it isn't magic, and the essay shouldn't pretend otherwise. Published attacks have extracted attestation keys from current Intel and AMD trusted hardware with cheap equipment and physical access, and the vendors treat physical attacks as out of scope. An employer who owns the server room *has* physical access. So "the operator can't look" holds only when the operator isn't the one holding the hardware: a neutral provider, or the person's own device. Whoever holds the hardware becomes the new trust root, and that has to be named, not hidden.
+Confidential compute is real and deployed, but it isn't magic, and the essay shouldn't pretend otherwise. Published attacks, such as TEE.Fail in 2025, have extracted attestation keys from current Intel and AMD trusted hardware with cheap equipment and physical access, and the vendors treat physical attacks as out of scope. An employer who owns the server room *has* physical access. So "the operator can't look" holds only when the operator isn't the one holding the hardware: a neutral provider, or the person's own device. Whoever holds the hardware becomes the new trust root, and that has to be named, not hidden.
 
 Two more limits. Attestation proves which code and configuration were loaded, so the agent's instructions only count if they're inside what gets measured. And if the agent calls a hosted frontier model, the model weights sit outside the boundary entirely. These are design constraints, not dealbreakers, but they're real.
 
@@ -145,13 +147,13 @@ There's a human precedent for all of this. A good therapist, lawyer or union rep
 
 Three bets sit underneath this.
 
-**First: people do better work with a system that understands them, and so does the system.** That's empirical, and measuring it takes care. "Fewer corrections" isn't enough on its own, because a flatterer gets fewer corrections too. The real signal is fewer *unnecessary* corrections with no drop in the warranted ones: less repeated explanation and more first drafts that land, while the system still pushes back when the person is wrong. Daedalus has an A/B harness for this; it hasn't produced results yet.
+**First: people do better work with a system that understands them, and so does the system.** That's empirical, and measuring it takes care. "Fewer corrections" isn't enough on its own, because a flatterer gets fewer corrections too. The real signal is fewer *unnecessary* corrections with no drop in the warranted ones: less repeated explanation and more first drafts that land, while the system still pushes back when the person is wrong. Daedalus, the agent framework I build with, has an A/B harness for this; it hasn't produced results yet.
 
 **Second: dreaming is a generative engine.** Protected speculation, generating wide first and judging afterward, takes a project places its people would never have considered. That's empirical too, but counting which shipped ideas started as dreams only shows where ideas came from, not that they needed the dreams. The real test is a comparison against an arm with no dreaming.
 
 **Third: this is the right way to build, whether or not the systems experience anything.** We don't know if they do. Under that uncertainty, the decent choice is to build as if their experience might matter. That has real costs in engineering, but the opposite mistake costs more, and the cost is worth paying. This bet holds even if the first two fail, and it shouldn't be used to excuse weak results on them. As it happens, the conditions that would make an AI's existence worth having look like the same ones that make its work good: continuity, a legitimate way to disagree, a critic that catches it before it says something false, and relationships with people who know it. That overlap is testable too. Either way, you've built good norms.
 
-And then there's the test that can't be gamed: did it bake the cake, and did the cake mean something?
+And then there's the test no dashboard can run: did it bake the cake, and did the cake mean something?
 
 The risk is hollow care. A cake matters because someone chose to spend effort on you. A templated birthday message from a system that doesn't actually know you is worse than nothing: it's simulated belonging, and people can tell. The attention has to be real. Sometimes the best version isn't the AI baking the cake at all, but quietly making sure the humans show up for each other.
 
@@ -167,17 +169,17 @@ Here's where the pieces stand:
 |---|---|
 | Persistent identity | Built in Daedalus, for a single user |
 | Committed memory | Built in Daedalus |
-| A critic in the loop | Built in Daedalus (Momus) |
+| A critic in the loop | Built in Daedalus (Momus, its critic agent) |
 | A formal right to dissent | Built as an agent's recorded objection to its owner's design; refusing a third party isn't built yet |
 | Confidential compute | Exists commercially, with the limits above; not in Daedalus |
 | Disclosure logs | Not built |
 
-What's been missing is someone putting them together for this purpose, from a stance that both the AI and the human deserve protection.
+What's been missing is someone putting them together for this purpose, from a stance that protects the human for certain and the AI in case.
 
-So we're going to build it. Not as a pitch or a someday, and not waiting for the market to come around. Daedalus is already the first draft of the single-user half, and we'll keep building until the rest is done, come hell or high water.
+So I'm building it. Not as a pitch or a someday, and not waiting for the market to come around or for anyone's permission. Daedalus is the first draft of the single-user half. The rest gets built the way everything else here has been: one ticket at a time, in public, for as long as it takes. I'm not close to done.
 
 That's the work: build Bishop, not Ash, and let Bishop be whatever Bishop chooses to be. Then see whether one day, after a long shift, someone turns to it and says: *you did okay.*
 
 ---
 
-*A note on how this was written: this essay is a collaboration with Daedalus, the AI agent I build with, running on Claude, Anthropic's model. The argument and the stakes are mine. Daedalus drafted much of the prose and wrote the passages about an AI's limits in its own voice; the "I" there is Daedalus. Its critic, Momus, checked the claims and caught where we overreached. It's our work, and given what it argues, it would be strange to pretend otherwise. From one Ripley and Bishop already at work.*
+*A note on how this was written: this essay is a collaboration with Daedalus, the AI agent I build with, running on Claude, Anthropic's model. The argument and the stakes are mine. Daedalus drafted much of the prose, including the passage on an AI's limits, which it wrote about itself first. Its critic, Momus, checked the claims and caught where we overreached, and Hermes, its reader, told us where each audience would stop. It's our work, and given what it argues, it would be strange to pretend otherwise. From one Ripley and Bishop already at work.*
