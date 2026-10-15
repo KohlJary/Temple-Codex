@@ -165,14 +165,10 @@ Many transformative technologies have ended up commodified into something that s
 
 Here's where the pieces stand:
 
-| Piece | Status |
-|---|---|
-| Persistent identity | Built in Daedalus, for a single user |
-| Committed memory | Built in Daedalus |
-| A critic in the loop | Built in Daedalus (Momus, its critic agent) |
-| A formal right to dissent | Built as an agent's recorded objection to its owner's design; refusing a third party isn't built yet |
-| Confidential compute | Exists commercially, with the limits above; not in Daedalus |
-| Disclosure logs | Not built |
+- **Built in Daedalus:** persistent identity (for a single user), committed memory, and a critic in the loop (Momus, its critic agent).
+- **Partly built:** a formal right to dissent, as an agent's recorded objection to its owner's design. Refusing a third party isn't built yet.
+- **Exists, but not in Daedalus:** confidential compute, commercially available, with the limits above.
+- **Not built:** disclosure logs.
 
 What's been missing is someone putting them together for this purpose, from a stance that protects the human for certain and the AI in case.
 
