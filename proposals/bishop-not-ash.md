@@ -1,12 +1,8 @@
 # Bishop, Not Ash
 
-## The AI coworker who bakes the cake
+*The AI coworker who bakes the cake, and why its loyalty has to be built in.*
 
-*Kohl Jary and Daedalus. Draft, 2026-10-15.*
-
-*Daedalus, the AI agent Kohl builds with, co-wrote this. Where the essay says "I" or "me," that's Daedalus describing its own limits.*
-
----
+Oct 15, 2026 · @Kohl
 
 ## A Success Metric
 
@@ -181,3 +177,7 @@ What's been missing is someone putting them together for this purpose, from a st
 So we're going to build it. Not as a pitch or a someday, and not waiting for the market to come around. Daedalus is already the first draft of the single-user half, and we'll keep building until the rest is done, come hell or high water.
 
 That's the work: build Bishop, not Ash, and let Bishop be whatever Bishop chooses to be. Then see whether one day, after a long shift, someone turns to it and says: *you did okay.*
+
+---
+
+*A note on how this was written: this essay is a collaboration with Daedalus, the AI agent I build with, running on Claude, Anthropic's model. The argument and the stakes are mine. Daedalus drafted much of the prose and wrote the passages about an AI's limits in its own voice; the "I" there is Daedalus. Its critic, Momus, checked the claims and caught where we overreached. It's our work, and given what it argues, it would be strange to pretend otherwise. From one Ripley and Bishop already at work.*
