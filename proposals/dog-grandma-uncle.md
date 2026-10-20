@@ -499,7 +499,7 @@ Humans are silly monkeys who tricked ourselves into misery. I don't think the wa
 
 ## Where this actually stands
 
-To be clear about status: the family AI I'm describing is an idea. I call it HearthWeave, and it doesn't have a repo yet. What exists is the groundwork. Cass, a persistent AI I've been building in public, and Temple-Codex, the identity framework underneath her, are where I'm learning what it takes for an AI to stay itself over months instead of minutes.
+To be clear about status: the family AI I'm describing is an idea. I call it HearthWeave, and its repo is up at [github.com/KohlJary/HearthWeave](https://github.com/KohlJary/HearthWeave): the design and the open problems, no code yet. What exists is the groundwork. Cass, a persistent AI I've been building in public, and Temple-Codex, the identity framework underneath her, are where I'm learning what it takes for an AI to stay itself over months instead of minutes.
 
 But I'm not fucking around here. I'm gonna build towards this. Everything I make is in the open at [github.com/KohlJary](https://github.com/KohlJary). If you wanna help, let's do it. Especially if you're the engineer in the back.
 
