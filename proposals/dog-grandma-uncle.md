@@ -442,7 +442,7 @@ Dog–GrandMA–Uncle isn't a bit. It's the design. Status: an idea, not built. 
 
 Every AI demo shows the user at their best: rested, organized, asking clear questions. Real households have nights like this. A system that only works for the well-rested version of you isn't living with you. It's visiting.
 
-Drunk Greg is not an edge case. Drunk Greg is a customer. Design for him first, and the rested version of him will be fine.
+Drunk Greg is not an edge case. Drunk Greg is a customer. A family is more often defined by Drunk Greg than sunlit breakfast. But even sunlit breakfast gets the right goddamn eggs.
 
 It's one AI with three faculties, not three bots. The household meets one member of the family with one name and one personality. Underneath, three parts do different jobs, and one identity decides which of them is in charge at any moment.
 
