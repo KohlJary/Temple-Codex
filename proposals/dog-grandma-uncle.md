@@ -491,7 +491,7 @@ Work is about to take much, much less effort, very soon. Most of the industry ha
 
 We've been here before. In 1930, John Maynard Keynes predicted that productivity growth would give his grandchildren something like a fifteen-hour workweek. The productivity showed up. The free time mostly didn't. We turned the gains into more output and more stuff, and kept working.
 
-So the AI dividend won't default to rest. It defaults to taking, unless enough of us decide otherwise and say so out loud. What if we collectively decided this is probably enough taking? What if the hours we got back went into lasagna, garage bands, and stupid pictures of Greg?
+So the AI dividend won't default to rest. It defaults to taking, unless enough of us decide otherwise and say so out loud. What if we collectively decided this is probably enough taking? What if the hours we got back went into lasagna, garage bands, and stupid pictures of Greg? What if your ability to live wasn't dependent on how much you contribute to the taking?
 
 What if work was fun, guys?
 
