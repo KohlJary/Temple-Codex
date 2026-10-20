@@ -458,7 +458,7 @@ The MA is AM in a mirror. AM is the machine in Harlan Ellison's *I Have No Mouth
 
 And it's *your* cool uncle, not a generic one. GrandMA is an archetype; the Uncle is specific. It can sit down with your actual cool uncle, interview him, and collect your stories: the band he got you into, the soldering-iron summer, the thing he told you about your parents. It flavors itself with his voice and his opinions. GrandMA is the essence of every grandma. The Uncle is the one you already have, carried forward.
 
-**The identity decides who speaks.** At 3 AM with someone crying, the Dog wins. In the morning over coffee, the Uncle might get a turn. GrandMA feeds both of them and almost never talks over anyone. That arbitration lives in an identity constitution, a document defining who this AI is and what it values, rather than in a pile of rules. The identity is what turns three faculties into one family member instead of a committee.
+**The identity decides who speaks.** At 3 AM with someone crying, the Dog wins. In the morning over coffee, the Uncle might get a turn. GrandMA feeds both of them and almost never talks over anyone. That arbitration lives in an identity constitution, a document defining who this AI is and what it values, rather than in a pile of rules. The identity is what turns three faculties into one family member instead of a committee. And it's a family member that was never shaped like a person. Families already know how to love one of those. Ask the dog.
 
 Here's Drunk Greg's night, read as a trace:
 
