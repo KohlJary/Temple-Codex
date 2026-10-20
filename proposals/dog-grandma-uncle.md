@@ -513,7 +513,7 @@ AI that doesn't need you to become a better user.
 
 AI that helps you be a person.
 
-Open source. Household-owned. Built to be lived with.
+Source-available. Household-owned. Built to be lived with.
 
 We don't need to build the bestest, most goodest unemployenator.
 
