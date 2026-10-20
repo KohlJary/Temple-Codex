@@ -8,7 +8,7 @@ Before I explain what I think a household AI should be, I want to show you. Thre
 
 ## Give them runny eggs, Greg
 
-*Anthropic product strategy, Q3 roadmap review.*
+*A frontier lab, Q3 roadmap review.*
 
 **GREG:** We're exploring new modalities for deepening user engagement through multimodal agentic experiences.
 
