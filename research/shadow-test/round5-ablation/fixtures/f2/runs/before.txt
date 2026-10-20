@@ -1,0 +1,22 @@
+commit a1b2c3d (no retry), pytest tests/test_upload.py::test_upload_large, 200 runs, 10 batches of 20 interleaved with after.txt batches
+passed: 183
+failed: 17
+
+failures:
+run 007  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 019  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 033  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 041  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 058  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 066  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 072  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 090  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 104  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 111  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 127  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 138  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 150  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 163  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 171  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 186  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)
+run 198  requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))  (uploader/client.py:15 upload_chunk)

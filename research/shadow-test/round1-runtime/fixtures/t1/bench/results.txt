@@ -1,0 +1,9 @@
+recordsync import benchmark
+dataset: data/sites.jsonl (48,210 records)
+
+baseline   main @ 3f9c2e1 (2026-09-08)   run on 2026-09-08   import_records: 6.8s
+candidate  feature/lru-cache @ 9ad41b7   run on 2026-10-10   import_records: 4.1s
+
+improvement: 39.7% faster
+
+notes: candidate run was done right after a dev import of the same file to check correctness.
