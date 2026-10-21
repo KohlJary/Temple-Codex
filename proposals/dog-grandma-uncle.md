@@ -432,6 +432,8 @@ Notice who was kind to Greg in that story. Not the AI. You were. The AI remember
 
 It's the eggs again. Remembering the elephant and remembering the yolks are the same move. Neither is a feature, exactly. That's what consideration looks like when you write it down, and it's the thing the industry keeps skipping on the way to more conversation.
 
+People hear this and think I'm thinking small. I am, on purpose. Big goals mostly matter to whoever's selling them. Not everyone has a Q3 deck. Everyone has a breakfast, a song they can't hear without crying, and a Boca. The small things are the only things every single person shares. A summarizer that's 4% faster helps knowledge workers. Remembering someone's eggs helps every person who's ever wanted to be noticed. Small, times everybody, is the biggest number there is.
+
 Kids understand this implicitly. A kid will spend an hour drawing you a picture of your cat and consider it the most important thing they did all day. They're right. Somewhere along the way, life beats it out of us, and we learn that only the billable things count.
 
 Maybe we wouldn't be in a loneliness epidemic if we all gave just a little more of a shit about making each other happy. I don't think an AI fixes that. I think the right AI could make it easier to remember.
