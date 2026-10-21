@@ -503,7 +503,7 @@ To be clear about status: the family AI I'm describing is an idea. I call it Hea
 
 But I'm not fucking around here. I'm gonna build towards this. Everything I make is in the open at [github.com/KohlJary](https://github.com/KohlJary). If you wanna help, let's do it. Especially if you're the engineer in the back.
 
-That's the bet. An AI that knows everything about your family and outlasts all of you could be AM. It could also be GrandMA. What decides which one you get is who the machine is.
+That's the bet. An AI that knows everything about your family and outlasts all of you could be AM. It could also be GrandMA. What decides which one you get is who the machine is. If you want a picture of the future, imagine an uncle making you laugh, forever.
 
 ## Final slide
 
