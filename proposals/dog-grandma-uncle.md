@@ -481,7 +481,7 @@ That last rule matters most. The dog, Grandma, and the cool uncle have one thing
 
 Yes, it knows everything a monitor would: the receipts, the bar, the draft that begins with "Frankly." What makes it not a monitor is who it reports to, which is nobody. What it knows about Greg, it uses for Greg.
 
-Downstream, it doesn't stop at one house. Dog–GrandMA–Uncle instances in different households are proposed to talk to each other over a new protocol: Uncle 2 Uncle, or U2U. Your uncle tells the neighbor's uncle about the barbecue. Two uncles notice their teenagers are both learning the same three chords. Each family decides what crosses the wire. Status: proposed, not designed.
+Downstream, it doesn't stop at one house. Dog–GrandMA–Uncle instances in different households are proposed to talk to each other over a new protocol: Uncle 2 Uncle, or U2U. Picture two uncles in lawn chairs, a few too many Schlitz in, bragging about their families. U2U carries brags, not data: only what a family would be glad to have said out loud on a porch. The kid made honor roll. Nobody mentions Boca. And the uncles talking isn't the point. Your uncle tells the neighbor's uncle about the barbecue so that you actually go to the barbecue. Two uncles notice their teenagers are learning the same three chords so the teenagers end up in the same garage. U2U exists to get you fuckers out of the house and hanging out with each other. Status: proposed, not designed.
 
 The hardest open problem is the Uncle's: confidences between family members, especially kids. What a kid tells the Uncle, and when "I have to tell your parents" kicks in. That's real design work, and it gets its own essay.
 
