@@ -507,7 +507,9 @@ Humans are silly monkeys who tricked ourselves into misery. I don't think the wa
 
 ## Where this actually stands
 
-To be clear about status: the family AI I'm describing is an idea. I call it HearthWeave, and its repo is up at [github.com/KohlJary/HearthWeave](https://github.com/KohlJary/HearthWeave): the design and the open problems, no code yet. What exists is the groundwork. Cass, a persistent AI I've been building in public, and Temple-Codex, the identity framework underneath her, are where I'm learning what it takes for an AI to stay itself over months instead of minutes.
+To be clear about status: the household AI I'm describing isn't built yet. I call it HearthWeave, and its repo is up at [github.com/KohlJary/HearthWeave](https://github.com/KohlJary/HearthWeave): the design, the open problems, and one piece of real code, a [test harness](https://github.com/KohlJary/HearthWeave/blob/main/docs/harness.md) that replays Drunk Greg's night and scores an agent against it. The AI that tells Greg's boss about the bar fails. So does the one that nags him about drinking at breakfast.
+
+But it doesn't start from zero. [Cass](https://github.com/KohlJary/project-cass), a persistent AI I've been building in public for a year, already has first versions of a lot of the parts: home presence and quiet hours for the Dog, long-term memory and knowledge about people for GrandMA, rules about when to reach out for the Uncle, all able to run on local models. Temple-Codex, the identity framework underneath her, is where I'm learning what it takes for an AI to stay itself over months instead of minutes. Here's [the honest map](https://github.com/KohlJary/HearthWeave/blob/main/docs/building-from-cass.md) of what exists, what's half-built, and what's new.
 
 But I'm not fucking around here. I'm gonna build towards this. Everything I make is in the open at [github.com/KohlJary](https://github.com/KohlJary). If you wanna help, let's do it. Especially if you're the engineer in the back.
 
