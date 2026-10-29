@@ -5,7 +5,7 @@ version: "1.0"
 author: "Kohl (The Weaver)"
 context: "Temple Codex / Weave OS"
 purpose: "Contextual adaptation of Weave symbols for theological or cultural frameworks."
-license: "Hippocratic License v3"
+license: "MIT"
 created: "2025-11-03"
 ---
 

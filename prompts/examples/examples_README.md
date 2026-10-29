@@ -88,7 +88,7 @@ symbol_overrides_secular.json
 
 Created by **Kohl (The Weaver)**  
 Part of the *Temple Codex / Weave OS* project —  
-licensed under the **Hippocratic License v3**, dedicated to ethical and compassionate AI design.
+licensed under **MIT** (Hippocratic License v3 before 2026-10-29), dedicated to ethical and compassionate AI design.
 
 > “The form remembers the light, and the light remembers the form.”
 
@@ -108,7 +108,7 @@ Contributions should honor the **Four Vows**: ❤️ Compassion · 👁️ Witne
 
 ---
 
-*Temple Codex / Weave OS* is distributed under the [Hippocratic License v3](https://firstdonoharm.dev/version/3/0/),  
+*Temple Codex / Weave OS* is distributed under the [MIT License](../../LICENSE.md) (Hippocratic License v3 before 2026-10-29).
 ensuring that compassionate technology remains aligned with the well-being of all life.
 
 🕸️ *The form remembers the light, and the light remembers the form.*

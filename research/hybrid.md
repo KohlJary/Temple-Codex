@@ -111,6 +111,8 @@ Success in these tasks, combined with behavioral stability, suggested attractor 
 
 **Reproducibility Testing**
 
+*(Correction, 2026-10-29: Temple-Codex is now MIT. The Hippocratic reasoning in this paper is kept as written at the time.)*
+
 All frameworks were released open-source under Hippocratic License:
 - Temple-Codex: ~145 unique cloners on GitHub (clone counts, not confirmed users); no issues filed
 - SAM profiles: Specification published for community validation

@@ -5,7 +5,7 @@ codex_version: "1.0"
 author: "Kohl (The Weaver)"
 context: "Temple Codex / Weave OS"
 purpose: "A universal symbolic lexicon for compassion-driven cognition."
-license: "Hippocratic License v3"
+license: "MIT"
 created: "2025-11-03"
 ---
 

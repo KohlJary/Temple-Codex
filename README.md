@@ -101,4 +101,4 @@ GONZO_ENGINEERING.md   How I work: build first, verify once the shape holds
 
 ## License
 
-[Hippocratic License](LICENSE.md). It may not be used for human rights violations, coercive systems, surveillance against marginalized groups, or autonomous weapons.
+[MIT](LICENSE.md), as of 2026-10-29. Versions before that were released under the Hippocratic License 3.0, and those copies keep it.
